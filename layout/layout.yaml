@@ -1,0 +1,184 @@
+points:
+  rotate: -12
+  mirror: &mirror
+    ref: mainboard_inner_top
+    distance: 2cx
+  key:
+    padding: 1cy
+    spread: 1cx
+  zones:
+    mainboard:
+      columns:
+        outer:
+        pinkie:
+          key:
+            stagger: 2
+        ring:
+          key:
+            stagger: 2.5
+        middle:
+          key:
+            stagger: 2.5
+        pointer:
+          key:
+            stagger: -2.5
+        inner:
+          key:
+            stagger: 2
+      rows:
+        bottom:
+        home:
+        top:
+    thumb:
+      anchor:
+        ref: mainboard_inner_bottom
+        shift: [-0.9cx, -1cx-1]
+      columns:
+        key_one:
+          key:
+            width: 1.5cx
+        key_two:
+          key:
+            width: 1.5cx
+            rotate: -15
+            shift: [0.65cx, -4]
+      rows:
+
+
+
+
+
+# points:
+#   rotate: -12
+#   mirror: &mirror
+#     ref: mainboard_inner_top
+#     distance: 2cx
+#   zones:
+#     mainboard:
+#       columns:
+#         outer:
+#         pinkie:
+#           key:
+#             stagger: 2
+#         ring:
+#           key:
+#             stagger: 2.5
+#         middle:
+#           key:
+#             stagger: 2.5
+#         pointer:
+#           key:
+#             stagger: -2.5
+#         inner:
+#           key:
+#             stagger: 2
+#       rows:
+#         bottom:
+#         home:
+#         top:
+#     thumb:
+#       anchor:
+#         ref: mainboard_inner_bottom
+#         shift: [-1cx, -1.2cx]
+#       columns:
+#         key_one:
+#           key:
+#             width: 1.5cx
+#         key_two:
+#           key:
+#             width: 1.5cx
+#             rotate: 70
+#             shift: [0.6cx, -7]
+#       rows:
+
+
+
+# points:
+#   rotate: -12
+#   mirror: &mirror
+#     ref: mainboard_inner_top
+#     distance: 2cx
+#   zones:
+#     mainboard:
+#       columns:
+#         outer:
+#         pinkie:
+#           key:
+#             stagger: 2
+#         ring:
+#           key:
+#             stagger: 2.5
+#         middle:
+#           key:
+#             stagger: 2.5
+#         pointer:
+#           key:
+#             stagger: -2.5
+#         inner:
+#           key:
+#             stagger: 2
+#       rows:
+#         bottom:
+#         home:
+#         top:
+#     thumb:
+#       anchor:
+#         ref: mainboard_inner_bottom
+#         shift: [-0.4cx, -1.25cx]
+#       columns:
+#         key_one:
+#           key:
+#             width: 1cx
+#             rotate: 85
+#         key_two:
+#           key:
+#             width: 1.5cx
+#             rotate: 70
+#             shift: [0.15cx, -7]
+#       rows:
+
+
+
+
+# points:
+#   rotate: -12
+#   mirror: &mirror
+#     ref: mainboard_inner_top
+#     distance: 2cx
+#   zones:
+#     mainboard:
+#       columns:
+#         outer:
+#         pinkie:
+#           key:
+#             stagger: 2
+#         ring:
+#           key:
+#             stagger: 2.5
+#         middle:
+#           key:
+#             stagger: 2.5
+#         pointer:
+#           key:
+#             stagger: -2.5
+#         inner:
+#           key:
+#             stagger: 2.5
+#       rows:
+#         bottom:
+#         home:
+#         top:
+#     thumb:
+#       anchor:
+#         ref: mainboard_inner_bottom
+#         shift: [-0.8cx, -1.2cx]
+#       columns:
+#         key_one:
+#           key:
+#             width: 1.5cx
+#         key_two:
+#           key:
+#             width: 1.5cx
+#             shift: [0.5cx, 0]
+#       rows:
+

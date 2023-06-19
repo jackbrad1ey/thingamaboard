@@ -1,0 +1,50 @@
+## STM32CubeIDE
+.metadata
+.settings
+[Rr]elease
+[Dd]ebug
+.launch
+
+
+## KiCAD
+# Temporary files
+*.000
+*.bak
+*.bck
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*-backups
+*.kicad_prl
+*.sch-bak
+*~
+_autosave-*
+*.tmp
+*-save.pro
+*-save.kicad_pcb
+fp-info-cache
+
+# Netlist files (exported from Eeschema)
+*.net
+
+# Autorouter files (exported from Pcbnew)
+*.dsn
+*.ses
+
+
+## AutoCAD
+# Temporary hidden files
+*.dwl
+*.dwl2
+
+# Backup files
+*.bak
+
+
+## SolidWorks
+~$*.SLDPRT
+~$*.SLDASM
+
+
+## Misc
+# ignore OS X desktops
+.DS_Store
