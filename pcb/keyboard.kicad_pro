@@ -795,6 +795,22 @@
     [
       "fc529d87-72d0-4c92-b352-ddcf4c6f7199",
       ""
+    ],
+    [
+      "55896886-29a1-46d7-b475-726a72adff13",
+      "power"
+    ],
+    [
+      "953c467c-8c0d-4158-80e9-7f51ef1515ee",
+      "connectors"
+    ],
+    [
+      "1c8ac5bd-b3bc-4835-a71b-e635010cd696",
+      "inputs"
+    ],
+    [
+      "64ee9d5d-ab82-4e0c-9832-d79f45631cea",
+      "stm32"
     ]
   ],
   "text_variables": {}
