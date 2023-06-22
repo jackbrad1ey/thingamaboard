@@ -1,6 +1,6 @@
 (kicad_sch (version 20230121) (generator eeschema)
 
-  (uuid 572797f3-389a-443c-bf26-60cd625de9ee)
+  (uuid 9d9b7188-c46e-4c94-87ae-b8c4bf76e07c)
 
   (paper "A4")
 
@@ -72,6 +72,116 @@
         )
       )
     )
+    (symbol "Device:R" (pin_numbers hide) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "R" (at 2.032 0 90)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "R" (at 0 0 90)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "R res resistor" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Resistor" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "R_*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "R_0_1"
+        (rectangle (start -1.016 -2.54) (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "R_1_1"
+        (pin passive line (at 0 3.81 270) (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 0 -3.81 90) (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+    (symbol "Jumper:SolderJumper_2_Bridged" (pin_names (offset 0) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "JP" (at 0 2.032 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "SolderJumper_2_Bridged" (at 0 -2.54 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "solder jumper SPST" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Solder Jumper, 2-pole, closed/bridged" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "SolderJumper*Bridged*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "SolderJumper_2_Bridged_0_1"
+        (rectangle (start -0.508 0.508) (end 0.508 -0.508)
+          (stroke (width 0) (type default))
+          (fill (type outline))
+        )
+        (arc (start -0.254 1.016) (mid -1.2656 0) (end -0.254 -1.016)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (arc (start -0.254 1.016) (mid -1.2656 0) (end -0.254 -1.016)
+          (stroke (width 0) (type default))
+          (fill (type outline))
+        )
+        (polyline
+          (pts
+            (xy -0.254 1.016)
+            (xy -0.254 -1.016)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0.254 1.016)
+            (xy 0.254 -1.016)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (arc (start 0.254 -1.016) (mid 1.2656 0) (end 0.254 1.016)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (arc (start 0.254 -1.016) (mid 1.2656 0) (end 0.254 1.016)
+          (stroke (width 0) (type default))
+          (fill (type outline))
+        )
+      )
+      (symbol "SolderJumper_2_Bridged_1_1"
+        (pin passive line (at -3.81 0 0) (length 2.54)
+          (name "A" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 3.81 0 180) (length 2.54)
+          (name "B" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
     (symbol "Switch:SW_Push" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
       (property "Reference" "SW" (at 1.27 2.54 0)
         (effects (font (size 1.27 1.27)) (justify left))
@@ -126,6 +236,178 @@
         )
       )
     )
+    (symbol "Transistor_BJT:BC858" (pin_names (offset 0) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "Q" (at 5.08 1.905 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Value" "BC858" (at 5.08 0 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 5.08 -1.905 0)
+        (effects (font (size 1.27 1.27) italic) (justify left) hide)
+      )
+      (property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC860-D.pdf" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (justify left) hide)
+      )
+      (property "ki_keywords" "PNP transistor" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "0.1A Ic, 30V Vce, PNP Transistor, SOT-23" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "SOT?23*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "BC858_0_1"
+        (polyline
+          (pts
+            (xy 0.635 0.635)
+            (xy 2.54 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0.635 -0.635)
+            (xy 2.54 -2.54)
+            (xy 2.54 -2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0.635 1.905)
+            (xy 0.635 -1.905)
+            (xy 0.635 -1.905)
+          )
+          (stroke (width 0.508) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 2.286 -1.778)
+            (xy 1.778 -2.286)
+            (xy 1.27 -1.27)
+            (xy 2.286 -1.778)
+            (xy 2.286 -1.778)
+          )
+          (stroke (width 0) (type default))
+          (fill (type outline))
+        )
+        (circle (center 1.27 0) (radius 2.8194)
+          (stroke (width 0.254) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "BC858_1_1"
+        (pin input line (at -5.08 0 0) (length 5.715)
+          (name "B" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 2.54 -5.08 90) (length 2.54)
+          (name "E" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 2.54 5.08 270) (length 2.54)
+          (name "C" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+    (symbol "power:+3.3V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "#PWR" (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Value" "+3.3V" (at 0 3.556 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "global power" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Power symbol creates a global label with name \"+3.3V\"" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "+3.3V_0_1"
+        (polyline
+          (pts
+            (xy -0.762 1.27)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 2.54)
+            (xy 0.762 1.27)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "+3.3V_1_1"
+        (pin power_in line (at 0 0 90) (length 0) hide
+          (name "+3.3V" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+    (symbol "power:GND" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "#PWR" (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Value" "GND" (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "global power" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "GND_1_1"
+        (pin power_in line (at 0 0 270) (length 0) hide
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
   )
 
   (junction (at 53.34 58.42) (diameter 0) (color 0 0 0 0)
@@ -161,8 +443,14 @@
   (junction (at 170.18 49.53) (diameter 0) (color 0 0 0 0)
     (uuid 2dcfbe4f-578e-4e36-8454-7abaf1a15fb8)
   )
+  (junction (at 52.07 130.81) (diameter 0) (color 0 0 0 0)
+    (uuid 33aaebab-f448-4ea0-97e4-a12c3c894510)
+  )
   (junction (at 116.84 44.45) (diameter 0) (color 0 0 0 0)
     (uuid 3801b021-4cfa-4caa-a5cb-9fb7c19cd2f5)
+  )
+  (junction (at 43.18 113.03) (diameter 0) (color 0 0 0 0)
+    (uuid 3828b3d3-98b7-4e43-8bbd-2d6ba6d09707)
   )
   (junction (at 193.04 44.45) (diameter 0) (color 0 0 0 0)
     (uuid 3cbed147-c663-4df9-bf65-b7b37b2424dc)
@@ -302,9 +590,6 @@
   (junction (at 142.24 44.45) (diameter 0) (color 0 0 0 0)
     (uuid e2a48081-33c1-4af7-bff8-80b99b7f776b)
   )
-  (junction (at 53.34 44.45) (diameter 0) (color 0 0 0 0)
-    (uuid e48a835f-f818-475b-a008-ee55711e4650)
-  )
   (junction (at 132.08 63.5) (diameter 0) (color 0 0 0 0)
     (uuid ea0b6f0b-d997-4d6e-95a0-e94c6eb9fd2c)
   )
@@ -325,6 +610,9 @@
   )
   (junction (at 78.74 58.42) (diameter 0) (color 0 0 0 0)
     (uuid fa46ccb1-7d1c-4d55-bec3-75f89ab02e66)
+  )
+  (junction (at 38.1 113.03) (diameter 0) (color 0 0 0 0)
+    (uuid fb23444a-8319-4ea5-ad27-57060e4f6ba3)
   )
   (junction (at 119.38 49.53) (diameter 0) (color 0 0 0 0)
     (uuid fc972cef-b230-4764-aafc-6aab41b72555)
@@ -360,6 +648,14 @@
   (wire (pts (xy 78.74 30.48) (xy 78.74 44.45))
     (stroke (width 0) (type default))
     (uuid 12d690a3-8061-44fd-904d-ac23d45d6a52)
+  )
+  (wire (pts (xy 72.39 111.76) (xy 72.39 110.49))
+    (stroke (width 0) (type default))
+    (uuid 1370d299-37ba-42f1-a5ed-745e13331519)
+  )
+  (wire (pts (xy 43.18 111.76) (xy 43.18 113.03))
+    (stroke (width 0) (type default))
+    (uuid 151d4bf6-bc14-4cbe-af29-58b16e691e18)
   )
   (wire (pts (xy 119.38 91.44) (xy 132.08 91.44))
     (stroke (width 0) (type default))
@@ -413,7 +709,7 @@
     (stroke (width 0) (type default))
     (uuid 2b94a106-aac2-4694-b501-0ad79cb7d01c)
   )
-  (wire (pts (xy 53.34 30.48) (xy 53.34 44.45))
+  (wire (pts (xy 53.34 30.48) (xy 53.34 58.42))
     (stroke (width 0) (type default))
     (uuid 2c9fecda-2466-4b03-8e90-dfafbba049da)
   )
@@ -424,6 +720,10 @@
   (wire (pts (xy 66.04 44.45) (xy 66.04 58.42))
     (stroke (width 0) (type default))
     (uuid 2f58036c-adb0-4bd8-bd8c-c40afb28b9e0)
+  )
+  (wire (pts (xy 52.07 129.54) (xy 52.07 130.81))
+    (stroke (width 0) (type default))
+    (uuid 301a7e18-eb63-4adf-95a4-83d8b544d9fb)
   )
   (wire (pts (xy 55.88 77.47) (xy 68.58 77.47))
     (stroke (width 0) (type default))
@@ -461,10 +761,6 @@
     (stroke (width 0) (type default))
     (uuid 477ac78a-2a29-4fd2-9def-411cc2ee4200)
   )
-  (wire (pts (xy 53.34 44.45) (xy 53.34 58.42))
-    (stroke (width 0) (type default))
-    (uuid 4befc164-69ac-4d3a-80df-d6a2c8b2e194)
-  )
   (wire (pts (xy 81.28 91.44) (xy 93.98 91.44))
     (stroke (width 0) (type default))
     (uuid 52012bc3-63c8-403b-a009-07bc8d564430)
@@ -476,6 +772,10 @@
   (wire (pts (xy 132.08 77.47) (xy 144.78 77.47))
     (stroke (width 0) (type default))
     (uuid 56c3d08e-d1d2-4550-ada9-8a21ce7637b4)
+  )
+  (wire (pts (xy 38.1 113.03) (xy 38.1 114.3))
+    (stroke (width 0) (type default))
+    (uuid 58d852a7-2d3d-49af-94fc-9fbd86e43058)
   )
   (wire (pts (xy 157.48 77.47) (xy 170.18 77.47))
     (stroke (width 0) (type default))
@@ -509,6 +809,10 @@
     (stroke (width 0) (type default))
     (uuid 6a4da455-d85e-48d2-a425-81310921e841)
   )
+  (wire (pts (xy 38.1 113.03) (xy 43.18 113.03))
+    (stroke (width 0) (type default))
+    (uuid 6d21b476-f43c-4717-93df-0c5124cec8bf)
+  )
   (wire (pts (xy 116.84 58.42) (xy 116.84 72.39))
     (stroke (width 0) (type default))
     (uuid 6e0c8926-bae8-498c-990e-00097d0f5071)
@@ -521,9 +825,17 @@
     (stroke (width 0) (type default))
     (uuid 6ee276f0-d663-4313-8e60-a0ba5f082301)
   )
+  (wire (pts (xy 35.56 113.03) (xy 38.1 113.03))
+    (stroke (width 0) (type default))
+    (uuid 701365ce-a08b-4eaf-9b5e-83c52fda61a0)
+  )
   (wire (pts (xy 63.5 30.48) (xy 66.04 30.48))
     (stroke (width 0) (type default))
     (uuid 74fcd6c2-34b9-4069-a9be-7884e83f60b1)
+  )
+  (wire (pts (xy 43.18 111.76) (xy 44.45 111.76))
+    (stroke (width 0) (type default))
+    (uuid 76660122-4779-408d-b0eb-11335b808315)
   )
   (wire (pts (xy 91.44 44.45) (xy 91.44 58.42))
     (stroke (width 0) (type default))
@@ -537,9 +849,17 @@
     (stroke (width 0) (type default))
     (uuid 7eb20487-3eac-406a-9e3c-e38bf7f05140)
   )
+  (wire (pts (xy 52.07 116.84) (xy 53.34 116.84))
+    (stroke (width 0) (type default))
+    (uuid 7ec93ddc-514f-49f1-bc07-13232e756b70)
+  )
   (wire (pts (xy 93.98 63.5) (xy 106.68 63.5))
     (stroke (width 0) (type default))
     (uuid 80ab3be3-f8ce-46d6-8cd1-4bc0af26227f)
+  )
+  (wire (pts (xy 52.07 130.81) (xy 55.88 130.81))
+    (stroke (width 0) (type default))
+    (uuid 82bcda05-d78b-44d1-9287-99001118608a)
   )
   (wire (pts (xy 91.44 58.42) (xy 91.44 72.39))
     (stroke (width 0) (type default))
@@ -556,6 +876,10 @@
   (wire (pts (xy 68.58 77.47) (xy 81.28 77.47))
     (stroke (width 0) (type default))
     (uuid 911b207a-6a72-47fb-a980-47c2ec5c7999)
+  )
+  (wire (pts (xy 52.07 119.38) (xy 52.07 116.84))
+    (stroke (width 0) (type default))
+    (uuid 92f27ca7-a635-4f53-8674-4a12201ed072)
   )
   (wire (pts (xy 119.38 49.53) (xy 132.08 49.53))
     (stroke (width 0) (type default))
@@ -581,6 +905,10 @@
     (stroke (width 0) (type default))
     (uuid 9da030be-c99d-4e84-aa21-08ec5aedb34f)
   )
+  (wire (pts (xy 69.85 111.76) (xy 72.39 111.76))
+    (stroke (width 0) (type default))
+    (uuid a0b5a498-01f6-47cc-b5b4-75a8b15e39ab)
+  )
   (wire (pts (xy 101.6 30.48) (xy 104.14 30.48))
     (stroke (width 0) (type default))
     (uuid a2e84edf-a42c-4e9f-a878-3272a380e408)
@@ -596,6 +924,10 @@
   (wire (pts (xy 93.98 49.53) (xy 106.68 49.53))
     (stroke (width 0) (type default))
     (uuid a83abead-3354-4e5f-8f5f-4055c1832ed7)
+  )
+  (wire (pts (xy 52.07 139.7) (xy 52.07 140.97))
+    (stroke (width 0) (type default))
+    (uuid a92d40fa-a4e3-4b14-83ab-e1948d957f2a)
   )
   (wire (pts (xy 116.84 72.39) (xy 116.84 86.36))
     (stroke (width 0) (type default))
@@ -616,6 +948,10 @@
   (wire (pts (xy 55.88 63.5) (xy 68.58 63.5))
     (stroke (width 0) (type default))
     (uuid b458bd57-8787-4ba7-b106-6d22680ada5d)
+  )
+  (wire (pts (xy 52.07 130.81) (xy 52.07 132.08))
+    (stroke (width 0) (type default))
+    (uuid b5c41cd7-de08-4c21-bfcc-9c0d3c73d883)
   )
   (wire (pts (xy 68.58 49.53) (xy 81.28 49.53))
     (stroke (width 0) (type default))
@@ -673,6 +1009,14 @@
     (stroke (width 0) (type default))
     (uuid e21cd67f-3ba2-4849-a9b4-87ded8297f32)
   )
+  (wire (pts (xy 43.18 113.03) (xy 43.18 114.3))
+    (stroke (width 0) (type default))
+    (uuid e2b2c17e-9ffb-45b7-b2f3-36a1179fb6c5)
+  )
+  (wire (pts (xy 43.18 124.46) (xy 44.45 124.46))
+    (stroke (width 0) (type default))
+    (uuid e4a9a564-48a4-4854-93bf-73897a6212ef)
+  )
   (wire (pts (xy 76.2 30.48) (xy 78.74 30.48))
     (stroke (width 0) (type default))
     (uuid e634298e-07a3-484f-be27-1cc3b9961ef4)
@@ -713,133 +1057,129 @@
     (stroke (width 0) (type default))
     (uuid fa0b25e9-d31c-4925-a08b-dedf56058080)
   )
+  (wire (pts (xy 43.18 121.92) (xy 43.18 124.46))
+    (stroke (width 0) (type default))
+    (uuid fcb4fce0-55d3-4b38-89ab-a7c96c160ba8)
+  )
   (wire (pts (xy 91.44 72.39) (xy 91.44 86.36))
     (stroke (width 0) (type default))
     (uuid fee15eb2-2d8b-4e6c-9ccc-afac7355d0c9)
   )
 
+  (rectangle (start 25.4 100.33) (end 82.55 148.59)
+    (stroke (width 0) (type default))
+    (fill (type none))
+    (uuid 6efed7ae-0776-422b-aa39-21949d9c3f25)
+  )
   (rectangle (start 25.4 25.4) (end 198.12 96.52)
     (stroke (width 0) (type default))
     (fill (type none))
     (uuid 917244a7-6f95-4d32-ac2a-250760064f6b)
   )
 
-  (text "Switches" (at 26.67 29.21 0)
+  (text "doubles as a normal keyboard button and pulls BOOT0 high"
+    (at 25.4 151.13 0)
+    (effects (font (size 1 1)) (justify left bottom))
+    (uuid 3f55222a-22f4-42b0-92d1-2cf04b2301bb)
+  )
+  (text "Switch matrix" (at 26.67 29.21 0)
     (effects (font (size 1.5 1.5) (thickness 0.254) bold) (justify left bottom))
     (uuid 78fe10b5-36c7-46cd-ada2-5d51e2415aec)
   )
+  (text "pull-down\nresistor" (at 30.48 123.19 0)
+    (effects (font (size 0.7 0.7)) (justify left bottom))
+    (uuid a617fcb1-c4a6-40fc-a42b-5e83cad527b8)
+  )
+  (text "BOOT0 button" (at 26.67 104.14 0)
+    (effects (font (size 1.5 1.5) (thickness 0.254) bold) (justify left bottom))
+    (uuid d339b8ef-2491-4e3e-b4ba-5e1335348369)
+  )
+  (text "in the event this circuit fails, the bridges can be \nopened and wires can be soldered to them to skip over the\nadditional circuitry, making the switch function normally"
+    (at 25.4 154.94 0)
+    (effects (font (size 0.7 0.7)) (justify left bottom))
+    (uuid f05cfff8-5298-4d7f-b0be-c916db78e07d)
+  )
 
-  (global_label "col8" (shape input) (at 152.4 30.48 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 0d50f8f1-c233-4d36-9dcb-4c23f4e1930c)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 145.3819 30.48 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
+  (label "S1_OUT" (at 55.88 130.81 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 2afc9b79-6b7a-4ec2-83d4-6dced162f5dc)
   )
-  (global_label "col5" (shape input) (at 114.3 30.48 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 2cff3e19-b0b6-4515-bc40-932b78f0a3d6)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 107.2819 30.48 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
+  (label "S1_OUT" (at 43.18 44.45 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right bottom))
+    (uuid d1d4109b-865e-4adc-aaa8-f3bd38282be5)
   )
-  (global_label "row0" (shape output) (at 35.56 49.53 180) (fields_autoplaced)
+
+  (hierarchical_label "col6" (shape input) (at 127 30.48 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 40569ef0-fe96-4d74-a2fc-dd832c03c9de)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 28.179 49.53 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
+    (uuid 004cfc57-c2e3-4a37-b38e-d84f613f0611)
   )
-  (global_label "col11" (shape input) (at 190.5 30.48 180) (fields_autoplaced)
+  (hierarchical_label "row3" (shape output) (at 35.56 91.44 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 44abfdf9-2809-4804-ad59-d7882a4459e9)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 182.2724 30.48 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
+    (uuid 143fe7c8-fe02-4dcf-a6ec-fb7068546a66)
   )
-  (global_label "col0" (shape input) (at 50.8 30.48 180) (fields_autoplaced)
+  (hierarchical_label "row2" (shape output) (at 35.56 77.47 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 545f0d0b-6922-4311-8c95-fe0de7c0fbde)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 43.7819 30.48 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
+    (uuid 3b3436de-4329-441a-ada2-24bcfb2e6fbf)
   )
-  (global_label "col9" (shape input) (at 165.1 30.48 180) (fields_autoplaced)
+  (hierarchical_label "col3" (shape input) (at 88.9 30.48 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 60f6e906-fb86-4a26-8ace-f7ceb6309cf3)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 158.0819 30.48 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
+    (uuid 504cedb7-f939-4856-a2ca-54df70d6c0fd)
   )
-  (global_label "col4" (shape input) (at 101.6 30.48 180) (fields_autoplaced)
+  (hierarchical_label "col7" (shape input) (at 139.7 30.48 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 66082fc6-a964-409f-9ee2-0c66ff1cc71b)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 94.5819 30.48 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
+    (uuid 74fadc96-582d-42e4-99cb-ff32bf1efb38)
   )
-  (global_label "col2" (shape input) (at 76.2 30.48 180) (fields_autoplaced)
+  (hierarchical_label "col8" (shape input) (at 152.4 30.48 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 7c3b4126-557f-442d-8584-2bd4d34a7fbe)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 69.1819 30.48 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
+    (uuid 81e3e1a1-987e-486d-8fba-8b3ebe704c85)
   )
-  (global_label "col6" (shape input) (at 127 30.48 180) (fields_autoplaced)
+  (hierarchical_label "row0" (shape output) (at 35.56 49.53 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 984f7a19-812f-454e-8caf-feaddbfedcf0)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 119.9819 30.48 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
+    (uuid 9a21f750-8a7a-45a9-b3cb-a8fc31efc5f2)
   )
-  (global_label "row1" (shape output) (at 35.56 63.5 180) (fields_autoplaced)
+  (hierarchical_label "col9" (shape input) (at 165.1 30.48 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
-    (uuid a967bba5-8297-4923-8647-2c15f50d522f)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 28.179 63.5 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
+    (uuid 9dc12f85-453e-4c5f-b461-2849a8ab6a67)
   )
-  (global_label "row3" (shape output) (at 35.56 91.44 180) (fields_autoplaced)
+  (hierarchical_label "col10" (shape input) (at 177.8 30.48 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
-    (uuid aead3bde-77d3-4c1d-b073-4d1bc7924f78)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 28.179 91.44 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
+    (uuid a29e3275-acc1-4b3d-9843-4bc0c629e341)
   )
-  (global_label "col7" (shape input) (at 139.7 30.48 180) (fields_autoplaced)
+  (hierarchical_label "row1" (shape output) (at 35.56 63.5 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
-    (uuid c038045d-3340-4c42-97f7-996f627986c4)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 132.6819 30.48 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
+    (uuid a42ff2ce-f86b-4a07-9c1a-a659ecf20fa6)
   )
-  (global_label "col10" (shape input) (at 177.8 30.48 180) (fields_autoplaced)
+  (hierarchical_label "BOOT0" (shape output) (at 35.56 113.03 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
-    (uuid d6c02846-62f2-473a-901d-ffe862f3fe5f)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 169.5724 30.48 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
+    (uuid ab2d71ba-3a9a-4a70-8591-e29c3857794b)
   )
-  (global_label "row2" (shape output) (at 35.56 77.47 180) (fields_autoplaced)
+  (hierarchical_label "col11" (shape input) (at 190.5 30.48 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
-    (uuid efdc884b-bb2f-4f6a-b8bd-35c42a9013d8)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 28.179 77.47 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
+    (uuid bddaed4d-b7e3-4d52-9187-6e613d2f1104)
   )
-  (global_label "col1" (shape input) (at 63.5 30.48 180) (fields_autoplaced)
+  (hierarchical_label "col0" (shape input) (at 50.8 30.48 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
-    (uuid f0a08185-3ece-4b3e-863a-7cb3c83f4b38)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 56.4819 30.48 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
+    (uuid d686872c-bb11-4233-8bbc-a252c9a74ee4)
   )
-  (global_label "col3" (shape input) (at 88.9 30.48 180) (fields_autoplaced)
+  (hierarchical_label "col1" (shape input) (at 63.5 30.48 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
-    (uuid fe201014-f798-47ff-8fd4-c2574675e8cb)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 81.8819 30.48 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
+    (uuid df73e6d7-4d5c-45fb-a5d5-ca6fc5ca5a76)
+  )
+  (hierarchical_label "col2" (shape input) (at 76.2 30.48 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid e2405877-875f-43a4-b841-b1e9fa2f0441)
+  )
+  (hierarchical_label "col4" (shape input) (at 101.6 30.48 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid e8587cea-55e8-414a-9d1c-a8e81cb0b0dd)
+  )
+  (hierarchical_label "col0" (shape input) (at 53.34 116.84 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid f10bb9c3-2d68-48b3-bc52-fe5b9535a9bc)
+  )
+  (hierarchical_label "col5" (shape input) (at 114.3 30.48 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid f5740573-521d-447e-a09f-8887c0e8dc07)
   )
 
   (symbol (lib_id "Switch:SW_Push") (at 73.66 44.45 0) (unit 1)
@@ -857,8 +1197,8 @@
     (property "Datasheet" "~" (at 73.66 39.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid fd42626a-2d62-4baa-8c04-ada467357fdd))
-    (pin "2" (uuid 0ad65002-46da-406b-8528-b5c8024c84ae))
+    (pin "1" (uuid a89b530b-a06f-4ef6-9aaa-a1e4df7d429f))
+    (pin "2" (uuid 79555bee-be18-482b-b235-0281d3de328b))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -886,8 +1226,8 @@
     (property "Datasheet" "~" (at 175.26 39.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid fb8c3648-1fe2-4b20-bc2a-2fc30a3c2899))
-    (pin "2" (uuid 227cca31-e37d-4e78-94fa-2ce8777d5525))
+    (pin "1" (uuid 31cdf6fe-4fa6-45f5-be46-407c6df54e9c))
+    (pin "2" (uuid 8c6b1378-9cbe-43ff-998d-f7b49f2b2f5b))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -915,8 +1255,8 @@
     (property "Datasheet" "~" (at 162.56 39.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 10ceb239-0cee-4e45-a0f3-b0268b727090))
-    (pin "2" (uuid 1d0113a4-1072-41cf-9128-ca32f4075c6c))
+    (pin "1" (uuid be4bcb17-eaad-4633-9644-29057c514b7f))
+    (pin "2" (uuid cba07e19-e9fd-4804-8ed1-b788ba97271a))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -953,8 +1293,8 @@
     (property "LCSC" "C2099" (at 144.78 88.9 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid aa8a31cd-4bc4-474a-a561-8cd237a065f5))
-    (pin "2" (uuid 7390690c-298a-4dde-bc1a-58fe76f42fc8))
+    (pin "1" (uuid 60f9bd44-765b-426a-9d45-9ad4f733c092))
+    (pin "2" (uuid 4bf9fef2-28f7-4560-bde0-4ab1ce401f8a))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -988,8 +1328,8 @@
     (property "LCSC" "C2099" (at 93.98 60.96 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 91b6a1fa-85d9-403a-bc22-ef5c4e313652))
-    (pin "2" (uuid 632aa674-b69c-49b8-baa7-cef8dada9499))
+    (pin "1" (uuid 5011dab0-a782-45a2-a880-489b003b27d6))
+    (pin "2" (uuid b4a3fdee-83e0-4fbf-ba12-d9b10cfb38af))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -1023,8 +1363,8 @@
     (property "LCSC" "C2099" (at 43.18 46.99 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid dfa09a2a-5163-4124-b5b1-6158ca1c084d))
-    (pin "2" (uuid c53cfa6a-7fb1-473c-a994-0f88196dda6a))
+    (pin "1" (uuid da6c7881-1bdf-4bd2-b737-579e6cdca4bf))
+    (pin "2" (uuid 57d08371-27ac-4479-8f68-c59f0d3e415c))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -1049,8 +1389,8 @@
     (property "Datasheet" "~" (at 175.26 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 6101de5f-e139-4e51-b777-ca977b5b7085))
-    (pin "2" (uuid 4e204d34-d5ae-4e30-965a-031c5dfd1af0))
+    (pin "1" (uuid e3279aa8-5e27-4563-840b-ceee55744e08))
+    (pin "2" (uuid eb4797f0-7c5e-4a10-a751-642be8593e8c))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -1078,8 +1418,8 @@
     (property "Datasheet" "~" (at 73.66 53.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 4d3b738d-23c0-4295-9bc6-5a74aa31e7b0))
-    (pin "2" (uuid 4e5e64a4-f131-4dbd-8a00-9d2731cd1c4e))
+    (pin "1" (uuid 57145444-1d43-44ea-bf14-ad58b2995fe6))
+    (pin "2" (uuid 97780eff-0604-453c-9fd9-216f880d782d))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -1116,8 +1456,8 @@
     (property "LCSC" "C2099" (at 119.38 46.99 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid d51d8d98-1d08-4003-aa2c-d90a9230de94))
-    (pin "2" (uuid 45cf5f6a-9cca-476a-9d39-20eb9388bfd7))
+    (pin "1" (uuid 31c52f97-e8b4-4542-ab77-2448e9de22ed))
+    (pin "2" (uuid 85e6b900-8306-415f-9907-2fc0a67b46ba))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -1151,8 +1491,8 @@
     (property "LCSC" "C2099" (at 132.08 60.96 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 67a90170-3a41-4396-a144-69904bc83430))
-    (pin "2" (uuid ff135dbc-0c35-4545-a342-91b84140a570))
+    (pin "1" (uuid 7cc73488-691c-4ca4-9355-110f8a8a1880))
+    (pin "2" (uuid 0189acd8-9049-4614-8124-94f1217b2d2d))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -1177,8 +1517,8 @@
     (property "Datasheet" "~" (at 48.26 53.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f85ff25d-cf4a-4cac-805f-aae82d6cda17))
-    (pin "2" (uuid beea82dc-7b7f-45a8-89ae-22d86478d092))
+    (pin "1" (uuid f5280f6c-93dd-4ea4-a588-7d0e38bd1bad))
+    (pin "2" (uuid 9fa241fd-76ac-4995-8275-2ce08a0cf34d))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -1206,8 +1546,8 @@
     (property "Datasheet" "~" (at 99.06 81.28 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 9e182115-5087-4d9a-9755-7a45ee8cb989))
-    (pin "2" (uuid bee15c92-271e-4e8f-b9aa-4c75261ff530))
+    (pin "1" (uuid 17355abf-caa6-43b0-b15e-0b591350ff7d))
+    (pin "2" (uuid c93ed459-22aa-4bd2-bf3f-329670dfd318))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -1244,8 +1584,8 @@
     (property "LCSC" "C2099" (at 93.98 88.9 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 017d4c08-7f3a-4bcc-950c-ac3efefcf757))
-    (pin "2" (uuid 8a91cd89-aee8-4dbc-bd52-790479453eac))
+    (pin "1" (uuid 9e6c01b6-bf52-4237-950a-b65edb081159))
+    (pin "2" (uuid 5c65ec79-8873-4cb7-9600-e4c27988f923))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -1270,8 +1610,8 @@
     (property "Datasheet" "~" (at 149.86 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 26e3f937-4c60-4e38-89d2-9d7062cb9652))
-    (pin "2" (uuid 31794db9-4a87-467e-a671-08036d6bb373))
+    (pin "1" (uuid 72a6ae42-40f8-4afb-ac72-c128ffbc3808))
+    (pin "2" (uuid 538af327-0680-401e-bdbd-e9181da09cfd))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -1299,8 +1639,8 @@
     (property "Datasheet" "~" (at 111.76 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 364d3e2f-cc1c-4c7e-8f0e-2b34fb5b65f0))
-    (pin "2" (uuid 872536dd-efb1-4bae-93bd-457a0984d6d7))
+    (pin "1" (uuid 5f18f65b-4918-4181-9b4c-ac530702a55b))
+    (pin "2" (uuid 6ce93578-a770-480e-9b40-afb73cebe8ee))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -1328,8 +1668,8 @@
     (property "Datasheet" "~" (at 149.86 81.28 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 2c6a3715-24bc-4268-ac55-0d141eacfeb2))
-    (pin "2" (uuid d0a139c8-ddc2-419c-9279-b401279a6111))
+    (pin "1" (uuid 03c3c89b-4a76-44c2-8bdd-62d6306be41f))
+    (pin "2" (uuid 3a0f18ed-34e0-480b-8ffa-f3ced20cc532))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -1337,6 +1677,56 @@
         )
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
           (reference "SW33") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3.3V") (at 72.39 110.49 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 379e777c-ed13-4489-aafe-e66ccc487268)
+    (property "Reference" "#PWR030" (at 72.39 114.3 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3.3V" (at 72.39 106.68 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 72.39 110.49 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 72.39 110.49 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 01a7d03f-8288-4371-8e38-d08dc092e5e4))
+    (instances
+      (project "keyboard"
+        (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
+          (reference "#PWR030") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 38.1 121.92 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 381b6f0d-517a-45aa-ab6a-7e488ffd22d0)
+    (property "Reference" "#PWR015" (at 38.1 128.27 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 38.1 127 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 38.1 121.92 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 38.1 121.92 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 9a50e0a6-aa50-4d37-9c44-4bb631ceb279))
+    (instances
+      (project "keyboard"
+        (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
+          (reference "#PWR015") (unit 1)
         )
       )
     )
@@ -1357,8 +1747,8 @@
     (property "Datasheet" "~" (at 111.76 39.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 4ebc9e78-b9ca-4e47-bf88-e52c6311a017))
-    (pin "2" (uuid 97f05b08-dc60-4fc5-8710-e9fa06f76bcc))
+    (pin "1" (uuid 047f1f20-3876-4baf-ba3b-200b67f1ddb1))
+    (pin "2" (uuid 46bae9a7-77de-4608-86d9-15b42612d96a))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -1366,6 +1756,32 @@
         )
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
           (reference "SW18") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Jumper:SolderJumper_2_Bridged") (at 66.04 111.76 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 39a05ae7-6248-4631-a7ec-59be12956bf9)
+    (property "Reference" "JP1" (at 66.04 106.68 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "bridge" (at 66.04 109.22 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" (at 66.04 111.76 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 66.04 111.76 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 91409f62-8357-46e9-9ee5-4b18bf713369))
+    (pin "2" (uuid 606e8d4e-fb25-4755-a2af-79efc7591a67))
+    (instances
+      (project "keyboard"
+        (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
+          (reference "JP1") (unit 1)
         )
       )
     )
@@ -1395,8 +1811,8 @@
     (property "LCSC" "C2099" (at 182.88 74.93 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 8db89032-d8ee-4f22-9f10-c5dd6ed1009e))
-    (pin "2" (uuid c866b73f-57c3-48f8-80eb-90678b7de956))
+    (pin "1" (uuid 454cd6a5-f898-4b0a-be6d-447f38a7d4d2))
+    (pin "2" (uuid 057c76f0-fcac-46f9-bcbd-fbeca14b8fa8))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -1430,8 +1846,8 @@
     (property "LCSC" "C2099" (at 81.28 60.96 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 4a392c96-7b96-455b-895a-c2ce54aac2ad))
-    (pin "2" (uuid bcace722-b64d-41ae-a3fd-3273119be404))
+    (pin "1" (uuid 4562f129-e785-43af-bd86-f9ebce15930f))
+    (pin "2" (uuid 690a9d41-64ae-4fb4-a0bb-12c905dc036e))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -1465,8 +1881,8 @@
     (property "LCSC" "C2099" (at 55.88 74.93 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 61a1748e-3c8d-4884-b63c-35a13181b842))
-    (pin "2" (uuid 316ecc5e-74b1-4dd6-8ee2-e0ad48e1e37a))
+    (pin "1" (uuid ca552b7c-7a92-4171-b0d2-b8492a751ffc))
+    (pin "2" (uuid da3aaf51-5136-48d5-89ec-5786bbba0dfb))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -1500,8 +1916,8 @@
     (property "LCSC" "C2099" (at 68.58 60.96 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid c1427353-8d07-4c43-a586-ae4630e84101))
-    (pin "2" (uuid 9a49a4b1-d2aa-491f-a9b4-0be740d57489))
+    (pin "1" (uuid c42e2c32-4acf-4bee-abe1-2624abec0099))
+    (pin "2" (uuid 5bf1885b-4e16-464b-9407-97952c8c06e7))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -1535,8 +1951,8 @@
     (property "LCSC" "C2099" (at 93.98 74.93 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f2088ca7-41ef-462e-a61e-77f360b0fffd))
-    (pin "2" (uuid be224b1b-7b27-4e62-9d82-951e6a67df16))
+    (pin "1" (uuid 8a114a40-e49e-469c-a5c0-0cb627350d09))
+    (pin "2" (uuid 736fa3ec-4bc0-4222-af52-6efe0e60b24b))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -1561,8 +1977,8 @@
     (property "Datasheet" "~" (at 86.36 53.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f37cfc30-0494-4b06-9d6e-4bb3b7dfe0a5))
-    (pin "2" (uuid 24282a3d-6020-445a-866a-ea826c7cf6bf))
+    (pin "1" (uuid bc85e5c7-2479-411f-a743-9c69d0cd6fca))
+    (pin "2" (uuid d164a5f3-6fdd-4990-9a91-e0cc9b8af717))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -1570,6 +1986,35 @@
         )
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
           (reference "SW11") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Switch:SW_Push") (at 57.15 111.76 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 4a6963b7-b87f-4a99-8749-109887bd941e)
+    (property "Reference" "SW1" (at 57.15 105.41 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "SW_Push" (at 57.15 107.95 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "local-library:SW_PG1350" (at 57.15 106.68 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 57.15 106.68 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid f6aa9cf4-e427-4aaf-9341-089836939cf1))
+    (pin "2" (uuid ea7feec7-8daa-4f80-bd50-65c39b1b0e72))
+    (instances
+      (project "keyboard"
+        (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
+          (reference "SW1") (unit 1)
+        )
+        (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
+          (reference "SW1") (unit 1)
         )
       )
     )
@@ -1599,8 +2044,8 @@
     (property "LCSC" "C2099" (at 170.18 46.99 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 7a4c52ea-3e82-4868-8701-773f3a5aa752))
-    (pin "2" (uuid 7c964958-79ac-428d-9a9f-6a950ad77529))
+    (pin "1" (uuid 15bad1ab-b183-4234-a9f4-ee5f40177438))
+    (pin "2" (uuid a7697415-706e-4fbe-8fc4-4eebaff58e62))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -1625,8 +2070,8 @@
     (property "Datasheet" "~" (at 99.06 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 59e5a732-e2d6-424b-856f-54eb051676ba))
-    (pin "2" (uuid 823c2b89-216a-4450-b342-2da77031e622))
+    (pin "1" (uuid 7b7059b9-1b95-4331-b42e-3704562098b0))
+    (pin "2" (uuid d683bb82-f98b-48a1-9558-b09a856f7002))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -1654,8 +2099,8 @@
     (property "Datasheet" "~" (at 187.96 39.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f70a90b7-555b-4049-9536-2814345f15f2))
-    (pin "2" (uuid 3e2db68a-2127-468e-8be6-78b3cb591409))
+    (pin "1" (uuid 1b3ee146-a3fe-479e-abd0-30699133124e))
+    (pin "2" (uuid 4ef213d4-1ab5-4ff4-b6d6-d28f09cbc6cb))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -1692,8 +2137,8 @@
     (property "LCSC" "C2099" (at 68.58 74.93 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid ba022064-6341-4d3f-aaef-3c640103cd3a))
-    (pin "2" (uuid 9de3cf8c-79c8-4f28-a09c-20836a223063))
+    (pin "1" (uuid 6ab37f8a-809c-4834-afde-2f8e95c75f54))
+    (pin "2" (uuid f874f73b-fc3e-4102-a87c-fdbc3e212c09))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -1718,8 +2163,8 @@
     (property "Datasheet" "~" (at 111.76 53.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f00290d0-dac8-4f80-bad4-9d8bc91c0fc5))
-    (pin "2" (uuid 2352cd6c-6704-48a7-9000-cda6d7c52a7e))
+    (pin "1" (uuid e8b87d92-0fe6-4eae-8501-71f4202755d6))
+    (pin "2" (uuid 0221a794-396a-4f7a-85fb-2f0c8ff49c3e))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -1727,6 +2172,32 @@
         )
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
           (reference "SW19") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 43.18 118.11 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 5b5a0068-4401-4766-b95c-099d3ac706bf)
+    (property "Reference" "R7" (at 45.72 117.475 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "1.91k" (at 45.72 120.015 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 41.402 118.11 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 43.18 118.11 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 140e6d1d-e3fa-4bae-9bbf-8360d40cb520))
+    (pin "2" (uuid e33f8f28-da26-4451-9a64-cab92e226107))
+    (instances
+      (project "keyboard"
+        (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
+          (reference "R7") (unit 1)
         )
       )
     )
@@ -1747,8 +2218,8 @@
     (property "Datasheet" "~" (at 86.36 39.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid dcd15cc6-2bfd-4b64-a275-8c5a37acacbd))
-    (pin "2" (uuid 50cc6a91-2699-46e3-8910-170019436e06))
+    (pin "1" (uuid 3500025e-751c-49f5-9f83-4de6a0bda392))
+    (pin "2" (uuid ddf22b90-ab38-421a-bf64-84465dd58c2d))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -1776,8 +2247,8 @@
     (property "Datasheet" "~" (at 124.46 39.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 4a0298ed-1e64-4871-99c6-58bd06640296))
-    (pin "2" (uuid e456c58f-ab7d-45da-a865-047b38d68281))
+    (pin "1" (uuid 7f1204c5-0721-411a-9153-43cab2d748e1))
+    (pin "2" (uuid 298e432b-2d1f-4c06-a7e8-0c30a610cd44))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -1805,8 +2276,8 @@
     (property "Datasheet" "~" (at 187.96 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 7a3aa85f-9376-434e-833d-62f1a62b4302))
-    (pin "2" (uuid 82890e19-1437-4e3f-9fca-645754e1002a))
+    (pin "1" (uuid 77c646ca-dc04-41e0-bcbf-f440cee722f9))
+    (pin "2" (uuid c4adeee1-fc5d-42b4-8367-139cdc7ea939))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -1814,6 +2285,32 @@
         )
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
           (reference "SW42") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 38.1 118.11 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 600193cd-32fc-4c5c-8c34-4f9ca266984d)
+    (property "Reference" "R5" (at 33.02 116.84 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "10.2k" (at 30.48 119.38 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 36.322 118.11 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 38.1 118.11 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 99c77d4d-d1eb-409a-8689-6c8324bf21eb))
+    (pin "2" (uuid cff47ca9-3cd0-4ccf-a0d8-63fe132d0780))
+    (instances
+      (project "keyboard"
+        (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
+          (reference "R5") (unit 1)
         )
       )
     )
@@ -1843,8 +2340,8 @@
     (property "LCSC" "C2099" (at 144.78 60.96 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 1a14b9e4-f54f-404e-851d-3627ae6ba772))
-    (pin "2" (uuid 21a90ba2-f38b-4705-becf-05d9b461a2ca))
+    (pin "1" (uuid e0f4e179-b45f-4cd2-a164-8c81ce62e2db))
+    (pin "2" (uuid 213a71dc-b6c4-4782-8ea5-e87127adbc2a))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -1878,8 +2375,8 @@
     (property "LCSC" "C2099" (at 55.88 46.99 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid e48a988c-9540-41c9-b262-93e97ae2ca35))
-    (pin "2" (uuid f8c7a8ed-026c-470b-9d16-fb6061e25246))
+    (pin "1" (uuid b5b1a806-6203-4569-99e4-2ed1132401b6))
+    (pin "2" (uuid c8c421b1-dc86-411a-970f-c98011992237))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -1913,8 +2410,8 @@
     (property "LCSC" "C2099" (at 144.78 46.99 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid ae4f4ed0-d53d-41a8-b03e-8a063937de85))
-    (pin "2" (uuid 650909cc-ded1-453f-a841-e544bd065efd))
+    (pin "1" (uuid 5a4dee61-648d-4787-b518-fc4009447b50))
+    (pin "2" (uuid ce755ba9-74e3-4224-8d30-5756e8bffb6c))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -1939,8 +2436,8 @@
     (property "Datasheet" "~" (at 162.56 53.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid ef00aa5d-0ccb-4e0c-89d4-e8eb25c5958b))
-    (pin "2" (uuid 88b2049d-9a38-4219-871d-a2334b2a9f0c))
+    (pin "1" (uuid 0d80f7eb-84ee-4c11-a504-76db6fa5daf5))
+    (pin "2" (uuid 8354220a-79ae-46f8-93c1-48354f25f465))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -1977,41 +2474,12 @@
     (property "LCSC" "C2099" (at 81.28 88.9 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 5d35247d-9592-498e-ada5-3ac82bd9ee47))
-    (pin "2" (uuid d2d08fad-7de6-495b-8e4a-599be287cfd9))
+    (pin "1" (uuid 229b6802-0b01-46bb-89da-1e35bc52c574))
+    (pin "2" (uuid 0a165b19-5263-45c3-ac5a-8679b8c07c96))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
           (reference "D13") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Switch:SW_Push") (at 48.26 44.45 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 75c61270-5819-40bd-a102-a96093f4417d)
-    (property "Reference" "SW1" (at 48.26 38.1 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "SW_Push" (at 48.26 40.64 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "local-library:SW_PG1350" (at 48.26 39.37 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 48.26 39.37 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid eddb666e-4115-4f98-a687-ed6437cd3b1f))
-    (pin "2" (uuid 51137b2e-5bdb-4bd1-a152-1402feb5e266))
-    (instances
-      (project "keyboard"
-        (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
-          (reference "SW1") (unit 1)
-        )
-        (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
-          (reference "SW1") (unit 1)
         )
       )
     )
@@ -2041,8 +2509,8 @@
     (property "LCSC" "C2099" (at 182.88 60.96 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 6928d3e5-d169-481c-8129-579e97c554dd))
-    (pin "2" (uuid 2cffb5c2-0d15-44bb-9b9d-be8e309ebffe))
+    (pin "1" (uuid 9dc2e174-9f5a-463b-ab1b-eb3af58ac8bb))
+    (pin "2" (uuid 55506ed8-9c36-4b84-94e1-8f134b66d2da))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -2067,8 +2535,8 @@
     (property "Datasheet" "~" (at 99.06 53.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid bc4a84b3-db05-4597-b26b-0f90529d891f))
-    (pin "2" (uuid 6c824846-baa7-473d-83cc-16ae4e3001a0))
+    (pin "1" (uuid ab19904d-4bf2-4920-8464-552229733583))
+    (pin "2" (uuid e01737e9-4974-44b8-87e7-aa4af7925f24))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -2105,8 +2573,8 @@
     (property "LCSC" "C2099" (at 157.48 46.99 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid aa65b406-0b68-4ead-8e68-cd7dec601ed0))
-    (pin "2" (uuid b4d9ffaf-5d4d-47c3-a2cb-28c4a7647f63))
+    (pin "1" (uuid 5c804ad3-ff96-47e8-93f0-e39d2a088cac))
+    (pin "2" (uuid dc871f5b-5705-48d5-af6c-a719e18c79c3))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -2140,8 +2608,8 @@
     (property "LCSC" "C2099" (at 170.18 74.93 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 1bad928a-c64e-4c5a-9fd7-6de7ba205ae2))
-    (pin "2" (uuid e714d18a-c54a-453d-acc0-9d82fab9f571))
+    (pin "1" (uuid ed90d411-b997-4f0e-892c-96befcdba7cc))
+    (pin "2" (uuid 0f5d7ae8-20a7-4e1d-8aaf-590714400c19))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -2166,8 +2634,8 @@
     (property "Datasheet" "~" (at 137.16 53.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid a601aea5-a0de-46dd-aec8-5dce84a224a4))
-    (pin "2" (uuid 0b168a9e-60f6-4950-a3df-3ed934986008))
+    (pin "1" (uuid 8eaf54d8-be1d-4a7d-8261-eda02f4cc4b4))
+    (pin "2" (uuid 51447186-6234-46ef-93a0-fa2df8817f29))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -2195,8 +2663,8 @@
     (property "Datasheet" "~" (at 73.66 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid e8c6cd6d-91ed-4eb1-9715-53827f16af16))
-    (pin "2" (uuid ff7a775d-47aa-48f8-9fc4-f06fde599416))
+    (pin "1" (uuid f0ddb57f-5aff-486a-b354-0883a6993722))
+    (pin "2" (uuid 1bd70a62-808e-430a-8664-2574ea2abba0))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -2233,8 +2701,8 @@
     (property "LCSC" "C2099" (at 55.88 60.96 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 285f112d-aa8f-49b9-9595-2b6cb28f7468))
-    (pin "2" (uuid 9395e06c-1b87-467d-b3cf-5e739fb73103))
+    (pin "1" (uuid e5564af2-203e-4764-ba1c-53ed0cb5a60c))
+    (pin "2" (uuid 84a63aec-f6b1-4378-89cb-d2a5825847f4))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -2259,8 +2727,8 @@
     (property "Datasheet" "~" (at 137.16 81.28 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 6e9db569-a983-4e44-b718-52077edd5306))
-    (pin "2" (uuid 6fdede32-2e07-41ca-aa3a-c59c900bd87d))
+    (pin "1" (uuid ce0d45b2-15d2-42e2-aaa1-2a36b934f4ba))
+    (pin "2" (uuid 4afccdeb-7786-4b83-a9b8-924e6a6469ec))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -2268,6 +2736,32 @@
         )
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
           (reference "SW29") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 52.07 135.89 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 936fee0f-2c42-4ab0-b0b4-ae258c90300c)
+    (property "Reference" "R8" (at 54.61 135.255 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "10.2k" (at 54.61 137.795 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 50.292 135.89 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 52.07 135.89 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 2ac616f1-5dbb-4956-9904-801ccb50f862))
+    (pin "2" (uuid 76bb6d85-7aea-4208-a974-6708e3824981))
+    (instances
+      (project "keyboard"
+        (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
+          (reference "R8") (unit 1)
         )
       )
     )
@@ -2288,8 +2782,8 @@
     (property "Datasheet" "~" (at 149.86 39.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid bdb3f2bc-34c5-4000-941d-e2483e043a80))
-    (pin "2" (uuid 37d98dd9-90b6-4d1e-9475-3ba16347b2ec))
+    (pin "1" (uuid 5ade8131-490f-4412-95e2-5a1c85ea8633))
+    (pin "2" (uuid 331426c8-11c7-4bb1-8c63-08673997a6fd))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -2317,8 +2811,8 @@
     (property "Datasheet" "~" (at 60.96 39.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 81267f6c-ca03-4b3e-96ca-7b74fdfca298))
-    (pin "2" (uuid ef7253a5-f7fa-4cab-9fee-b2a71cb3451f))
+    (pin "1" (uuid 2abd324d-313a-4492-9960-da62c091964b))
+    (pin "2" (uuid 01a20462-1d46-454f-84a2-3b2e3c54324e))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -2355,8 +2849,8 @@
     (property "LCSC" "C2099" (at 119.38 88.9 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid e02f6988-0de8-427c-ac6e-8245c6d4530f))
-    (pin "2" (uuid fd67c6e5-b6f8-4ef4-9074-c1127bd6b6a5))
+    (pin "1" (uuid f392d701-2139-4305-b0ac-f5152aa2d3f1))
+    (pin "2" (uuid ff7e310c-b61a-488e-83ef-0703f447e292))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -2390,8 +2884,8 @@
     (property "LCSC" "C2099" (at 43.18 74.93 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid a78de543-68e1-460d-80b3-c81c4aa38893))
-    (pin "2" (uuid df9304ff-168a-4f2a-9b41-65499de501df))
+    (pin "1" (uuid b65e6e35-2fa2-46cd-81e7-bd02e16e6db7))
+    (pin "2" (uuid 5a8facb2-3c10-4e7f-b0c9-b80191db06e8))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -2425,8 +2919,8 @@
     (property "LCSC" "C2099" (at 119.38 60.96 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 032ccb62-5b4d-4f10-a188-e04f75d21229))
-    (pin "2" (uuid 76a8a26b-6b34-4279-a019-a237ed2aff10))
+    (pin "1" (uuid 4826b8b5-a34f-4fd9-ac06-d4cd2c269e52))
+    (pin "2" (uuid d789846f-d3c1-40b1-8d9a-1c16978218fc))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -2451,8 +2945,8 @@
     (property "Datasheet" "~" (at 124.46 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 90dc6673-af5c-4c81-b969-729d0e423eac))
-    (pin "2" (uuid d1a5626b-1e09-4c1e-abe3-9eb2c8f2b2ec))
+    (pin "1" (uuid 5adbd302-9bac-4baf-9254-dce08372f38a))
+    (pin "2" (uuid 60b514e0-f6f0-4869-b2b9-b6fefc8ff308))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -2460,6 +2954,31 @@
         )
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
           (reference "SW24") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 52.07 140.97 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid a1b1423a-8454-418d-bb70-f53d6954460c)
+    (property "Reference" "#PWR029" (at 52.07 147.32 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 52.07 146.05 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 52.07 140.97 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 52.07 140.97 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 87b4400d-f1dc-4dd4-913d-812671ecc19e))
+    (instances
+      (project "keyboard"
+        (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
+          (reference "#PWR029") (unit 1)
         )
       )
     )
@@ -2489,8 +3008,8 @@
     (property "LCSC" "C2099" (at 132.08 74.93 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 6c0cb86b-5154-4737-b624-60f59aadc9b0))
-    (pin "2" (uuid cb19a96f-f5f0-45ee-ad6c-179e2c3f8f69))
+    (pin "1" (uuid 6ab79728-7fb4-43de-ab81-06dda70d3435))
+    (pin "2" (uuid a5af7ddd-3018-4432-90e5-5a6e80b0cf03))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -2524,8 +3043,8 @@
     (property "LCSC" "C2099" (at 144.78 74.93 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid bff85d2e-008c-487c-a2d7-2f9ffde4d886))
-    (pin "2" (uuid 7a4b9e0a-2e12-48dd-ac47-25c99535adcb))
+    (pin "1" (uuid e3b1bb83-7ee3-468b-aa90-adfe368bb864))
+    (pin "2" (uuid af32ad2e-0de0-4212-9f6e-7b685b231618))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -2550,8 +3069,8 @@
     (property "Datasheet" "~" (at 162.56 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 71a7878f-31a0-48fe-ad5d-cfcae0b194fb))
-    (pin "2" (uuid 507bbe9a-68de-4c2d-9b70-722489b5f513))
+    (pin "1" (uuid b8fde67e-cede-4e07-8e16-03e8302f5305))
+    (pin "2" (uuid 7e436181-f5bf-40de-9401-b8c31746f212))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -2588,8 +3107,8 @@
     (property "LCSC" "C2099" (at 106.68 60.96 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 5726a150-2d3b-4755-8c9f-aa6e562bd0a9))
-    (pin "2" (uuid 13d8b7c5-ca25-4223-bb48-f28d23d83f62))
+    (pin "1" (uuid de1b602d-8bb3-4daa-ac0b-5fb673523523))
+    (pin "2" (uuid 0ad3ef8e-e49c-4efa-be3e-2ea9fbae8a9f))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -2614,8 +3133,8 @@
     (property "Datasheet" "~" (at 86.36 81.28 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 49447990-4836-44e6-846d-981b9cf64b0d))
-    (pin "2" (uuid a75bc51a-9a26-4948-832e-887fe087536e))
+    (pin "1" (uuid be8c8c24-6e34-4101-bed6-06d9c9905ee9))
+    (pin "2" (uuid 00eddf5f-207e-4378-8dc5-39ebcb01ed81))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -2652,8 +3171,8 @@
     (property "LCSC" "C2099" (at 170.18 60.96 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid a229d95f-ef57-4dbf-baf5-76daea390e46))
-    (pin "2" (uuid 1fba8da7-ff1b-4313-8446-291869793f0d))
+    (pin "1" (uuid 6d2af819-67a0-47f5-ab22-1226f9139a94))
+    (pin "2" (uuid 6f502920-4410-4bb7-afc6-aa930c31dcfc))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -2687,8 +3206,8 @@
     (property "LCSC" "C2099" (at 132.08 88.9 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 0d7d860e-81ed-45ee-a2b3-c3572a6b7cf5))
-    (pin "2" (uuid 4178f4c8-c769-499d-99b6-b390f0229437))
+    (pin "1" (uuid dae58efe-fff0-4098-a225-061b8c711f97))
+    (pin "2" (uuid aa94e8d8-8b52-4818-9b4f-2edcbb8f55bc))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -2713,8 +3232,8 @@
     (property "Datasheet" "~" (at 149.86 53.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 3f7ed245-7b7f-4dee-833d-d556ad1743c2))
-    (pin "2" (uuid 2f3f59ea-a68d-4560-a206-4133804b0ab9))
+    (pin "1" (uuid 1fe2e1ca-2a4d-46af-9052-746dc208939a))
+    (pin "2" (uuid 0b3ee2c3-c0c5-4b0d-aaf6-c0432f01ec05))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -2742,8 +3261,8 @@
     (property "Datasheet" "~" (at 175.26 53.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid c98b17f2-50f9-46b5-8b1b-cbc34db02d60))
-    (pin "2" (uuid 15ce54c4-aad2-4de5-b6cb-d861f96606b5))
+    (pin "1" (uuid e4e723d1-8dc9-4f75-9bd6-d9432fcf83c6))
+    (pin "2" (uuid 4287e128-b69a-414e-93e5-8d17aeaba477))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -2780,8 +3299,8 @@
     (property "LCSC" "C2099" (at 43.18 60.96 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 0525978c-dfe8-4290-98c7-71d97dc60801))
-    (pin "2" (uuid d40f1e92-5a71-45db-a764-aed1c2ce1419))
+    (pin "1" (uuid db9d76b8-7ab3-447d-a0d2-877d4a2c4cee))
+    (pin "2" (uuid fad6338a-f4ff-4d8f-ac3f-446d17ec541d))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -2806,8 +3325,8 @@
     (property "Datasheet" "~" (at 99.06 39.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid eea51e5d-2019-40ca-8500-8c3358e383c9))
-    (pin "2" (uuid 34316e46-5a0f-423f-a858-1b2fe86aa6bd))
+    (pin "1" (uuid dd4a785c-ebe3-4138-ab4c-5076b000e905))
+    (pin "2" (uuid d2914204-a15c-4170-bbcd-414859fe321f))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -2835,8 +3354,8 @@
     (property "Datasheet" "~" (at 60.96 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 382349b5-766a-4422-bc6b-8dba8e1d7977))
-    (pin "2" (uuid ec651d83-8f02-4c48-a113-5a4355be2333))
+    (pin "1" (uuid 85a9217d-dde2-436a-b64a-645b00aaca50))
+    (pin "2" (uuid 293b8beb-4c54-4541-b480-af1718ad539a))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -2864,8 +3383,8 @@
     (property "Datasheet" "~" (at 48.26 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 0fbff910-79a1-4dab-a13e-0a49e03596a0))
-    (pin "2" (uuid 840fb6fc-2757-4d86-8076-65207fd3a747))
+    (pin "1" (uuid 356024ad-9a6a-47b5-b21e-d6ba77b548f3))
+    (pin "2" (uuid 8e96b753-1ba3-42fa-bd9f-b6dd7b719601))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -2893,8 +3412,8 @@
     (property "Datasheet" "~" (at 60.96 53.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 280d40c6-1b58-416f-a0be-6e21f7d44a3f))
-    (pin "2" (uuid 1c200d5f-2069-4bac-989b-e31192ab7441))
+    (pin "1" (uuid cf850dde-b8cd-4feb-bdf2-39971858959d))
+    (pin "2" (uuid db5de11d-31ff-419b-8ce7-4a311f5bc8a2))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -2931,8 +3450,8 @@
     (property "LCSC" "C2099" (at 81.28 74.93 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 6db243af-1bea-4742-8ac9-a99dfa7ba9d0))
-    (pin "2" (uuid 206480da-e252-41c1-b522-885093218d08))
+    (pin "1" (uuid 17aa07ea-c5c9-4154-acb0-186834b7aaf0))
+    (pin "2" (uuid 8e9761b1-dc4b-4911-8162-8ed7a77d3e54))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -2957,8 +3476,8 @@
     (property "Datasheet" "~" (at 124.46 81.28 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 5de406b7-50f6-46b3-9a19-5a2274a7f400))
-    (pin "2" (uuid 9556c1c0-4b31-47fe-a1f0-01c750f82900))
+    (pin "1" (uuid 0285b23e-328c-49c0-aeb9-73fdf431f9d6))
+    (pin "2" (uuid 4ab7fcdf-dcc0-4bd7-b2dd-fbce0a6838d2))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -2986,8 +3505,8 @@
     (property "Datasheet" "~" (at 124.46 53.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid e16082fc-db13-4e2f-9b41-9db507045075))
-    (pin "2" (uuid cb1da9bd-7dde-4f09-a545-a2f23410a688))
+    (pin "1" (uuid 2e0dae00-c0f6-4f2a-a90e-d645e86a2fd7))
+    (pin "2" (uuid a1489d94-325f-4249-a73c-c84ac8067ba8))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -3015,8 +3534,8 @@
     (property "Datasheet" "~" (at 111.76 81.28 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 4409dd7e-a786-4526-8998-b7ca2a699dab))
-    (pin "2" (uuid c2be0f39-7fbf-4be8-bf8f-5b70f2bb1d55))
+    (pin "1" (uuid 52bdd2f0-eb2e-4d41-a745-f28b942bd4e7))
+    (pin "2" (uuid 894a2778-b010-48b9-a750-91eb3296d575))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -3024,6 +3543,36 @@
         )
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
           (reference "SW21") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Transistor_BJT:BC858") (at 49.53 124.46 0) (mirror x) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid c7935278-2fa4-4b95-a300-f0557f09e3a5)
+    (property "Reference" "Q2" (at 54.61 125.095 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "BC858" (at 54.61 122.555 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 54.61 122.555 0)
+      (effects (font (size 1.27 1.27) italic) (justify left) hide)
+    )
+    (property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC860-D.pdf" (at 49.53 124.46 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+    (property "LCSC" "C81569" (at 49.53 124.46 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid fb0c79e3-c8e6-4005-a5cf-1427cc7b9d78))
+    (pin "2" (uuid b7933e99-dda2-4183-98ed-59b4713d8e5d))
+    (pin "3" (uuid 440d2dfe-0ba8-4224-873e-2ee3d2a8c351))
+    (instances
+      (project "keyboard"
+        (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
+          (reference "Q2") (unit 1)
         )
       )
     )
@@ -3053,8 +3602,8 @@
     (property "LCSC" "C2099" (at 119.38 74.93 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 59ec5768-f377-49ec-ac1a-80b6c76b2369))
-    (pin "2" (uuid 258ec7c5-ea4c-4df8-b7e4-de07043d9c6e))
+    (pin "1" (uuid 8718bd26-d9a4-477d-92ab-da91e76fa154))
+    (pin "2" (uuid e2483022-7778-4012-a856-ee2f49d62cd4))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -3088,8 +3637,8 @@
     (property "LCSC" "C2099" (at 182.88 46.99 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 8809b469-273d-4da4-8132-f6eebe3f9ed8))
-    (pin "2" (uuid 37e8607a-b30f-4006-b0c9-10127ae595f1))
+    (pin "1" (uuid 885ab321-5ee7-482a-b91b-91127be2dd79))
+    (pin "2" (uuid ee8f1251-6c94-4c24-8d10-7828a2953375))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -3123,8 +3672,8 @@
     (property "LCSC" "C2099" (at 81.28 46.99 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 0b87bdc5-5dea-403b-8ed4-64c89cd097e9))
-    (pin "2" (uuid 6275fcd3-0975-4bc9-b910-a9a9150c6dfa))
+    (pin "1" (uuid e1886727-f4ea-4c38-b0c9-e2edff6d2a2d))
+    (pin "2" (uuid 74820f6e-549b-41a3-a8e1-8ec69b1823e2))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -3158,8 +3707,8 @@
     (property "LCSC" "C2099" (at 106.68 46.99 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 24761487-442d-4134-91d4-19ff470dca3c))
-    (pin "2" (uuid dd317dde-25a0-41ba-a002-11796e3502df))
+    (pin "1" (uuid 18541682-20d0-4632-b63c-c082a9c47b09))
+    (pin "2" (uuid c7ab8b0a-9611-47ab-9c89-6b0ff669ca2d))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -3184,8 +3733,8 @@
     (property "Datasheet" "~" (at 137.16 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 0b8d82b6-a6d6-4a32-82aa-e8cb25995adc))
-    (pin "2" (uuid 9a7eb9c1-0c5d-4888-837c-b474fa617e2c))
+    (pin "1" (uuid 56e250c7-c003-405f-b551-d09f693b9ef4))
+    (pin "2" (uuid 347ed3a6-cd0b-4171-b3e2-f30d1f5d6b88))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -3222,8 +3771,8 @@
     (property "LCSC" "C2099" (at 157.48 74.93 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 23457812-98f2-48a0-9481-66e5e1f65ece))
-    (pin "2" (uuid e9e0e690-5a8e-4564-b18d-4b9d0c0103bf))
+    (pin "1" (uuid 5d3bd71c-7b83-4fed-868b-f2e1a9ae0ef0))
+    (pin "2" (uuid 8de46ab1-d77d-41e5-ac64-eba4be365967))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -3257,8 +3806,8 @@
     (property "LCSC" "C2099" (at 93.98 46.99 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid b93cf235-9193-4d3e-9ac9-3e518fe01e7d))
-    (pin "2" (uuid 10c03e1d-cc85-4a62-b516-b2fcd2393b03))
+    (pin "1" (uuid ca6df855-430a-4550-9ad2-0ac6dcba9f01))
+    (pin "2" (uuid ee4b4f65-281f-4db3-841b-a06520306f50))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -3292,8 +3841,8 @@
     (property "LCSC" "C2099" (at 132.08 46.99 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid c9c7577f-7064-4551-af05-084fcc781994))
-    (pin "2" (uuid c50c64f4-e569-4f23-bb14-178b4b94697b))
+    (pin "1" (uuid 9a94f022-5bc1-454c-b33b-4cc6e5ec1ee3))
+    (pin "2" (uuid a16a22fb-7bcd-45ad-8747-8ce95c039509))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -3327,8 +3876,8 @@
     (property "LCSC" "C2099" (at 106.68 74.93 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid c9c584fb-515c-44a5-805c-2788d05031d4))
-    (pin "2" (uuid 34276d6f-57d6-4499-978a-186d5a722e42))
+    (pin "1" (uuid 2985c90f-b7d1-4b7a-bf56-57f1edfc6aae))
+    (pin "2" (uuid be41e372-dd15-4291-8b88-9d3a91593d77))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -3353,8 +3902,8 @@
     (property "Datasheet" "~" (at 137.16 39.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 80cbe356-e7d3-4ae1-b7dd-215fd0145ef9))
-    (pin "2" (uuid b330772e-d72c-4da2-9704-db76d5e8894f))
+    (pin "1" (uuid 32dd82e9-58e7-4a0e-b711-6932bd7f007f))
+    (pin "2" (uuid c69bcaf5-0239-45a8-90c5-4f3db920b507))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -3391,12 +3940,38 @@
     (property "LCSC" "C2099" (at 157.48 60.96 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 4e5f5440-06f9-4714-84d4-9045508c48ac))
-    (pin "2" (uuid 6c7f16de-c5e9-4d57-be27-4769e8ce80b3))
+    (pin "1" (uuid 6f4922bf-3aee-4b65-8c61-12e9182eb77a))
+    (pin "2" (uuid 824fd2cb-d206-4fa6-863a-5ad50e2f3431))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
           (reference "D35") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Jumper:SolderJumper_2_Bridged") (at 48.26 111.76 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid f02c5f46-f148-470a-b8e2-3df181309f50)
+    (property "Reference" "JP2" (at 48.26 106.68 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "bridge" (at 48.26 109.22 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" (at 48.26 111.76 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 48.26 111.76 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid ad5af710-7746-44bf-bc45-592d13ccba66))
+    (pin "2" (uuid 16451449-f15b-45d1-82ce-37ce57b527d8))
+    (instances
+      (project "keyboard"
+        (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
+          (reference "JP2") (unit 1)
         )
       )
     )
@@ -3417,8 +3992,8 @@
     (property "Datasheet" "~" (at 86.36 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 6d37daf9-47a9-44e8-a6f5-5cbef1a52cb8))
-    (pin "2" (uuid a6caf032-aaf5-46e2-817c-88e3e3d6682c))
+    (pin "1" (uuid 5aedaa46-6817-4dbb-8afa-0ab4e66a0bcc))
+    (pin "2" (uuid d28dd261-2bc3-4f2b-b889-ac9aa0ae6baa))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -3455,8 +4030,8 @@
     (property "LCSC" "C2099" (at 106.68 88.9 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 84603197-5277-4148-bba9-20c12fa61d2f))
-    (pin "2" (uuid 1993ea52-8a60-4e14-a165-928f89102afa))
+    (pin "1" (uuid aa097e0f-4f62-43e1-a1d9-cee384629408))
+    (pin "2" (uuid 3b8d2ba5-75e2-41b5-a477-6bace2fc0002))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
@@ -3481,8 +4056,8 @@
     (property "Datasheet" "~" (at 187.96 53.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid ae931959-ce26-4fd3-9341-f04cdd904ad8))
-    (pin "2" (uuid d39db1b3-eeaa-4f5c-a7b5-ee20c736fd48))
+    (pin "1" (uuid e41a7271-bad2-415d-bd11-f6ac6fa13327))
+    (pin "2" (uuid f62f5037-371f-43b3-be13-3a833a77d282))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199"
@@ -3519,8 +4094,8 @@
     (property "LCSC" "C2099" (at 68.58 46.99 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 80c2cb9e-ce4c-4a80-b6b7-95b8c1d28222))
-    (pin "2" (uuid 99ae4fa4-4788-4f6a-aecd-d7066a1eb4e6))
+    (pin "1" (uuid 52cc691d-8a20-4e41-8431-cdda8a478f98))
+    (pin "2" (uuid ea65bb99-d728-4da7-b096-dfbd54e6cdc1))
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199/1c8ac5bd-b3bc-4835-a71b-e635010cd696"
