@@ -35,8 +35,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 2.0,
-          "width": 2.0
+          "height": 0.5,
+          "width": 1.0
         },
         "silk_line_width": 0.12,
         "silk_text_italic": false,
@@ -435,6 +435,23 @@
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
+        "name": "Matrix",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.5,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
         "name": "Power",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
@@ -810,6 +827,62 @@
       {
         "netclass": "Power",
         "pattern": "VBUS"
+      },
+      {
+        "netclass": "Matrix",
+        "pattern": "/inputs/row1"
+      },
+      {
+        "netclass": "Matrix",
+        "pattern": "/inputs/row0"
+      },
+      {
+        "netclass": "Matrix",
+        "pattern": "/inputs/col0"
+      },
+      {
+        "netclass": "Matrix",
+        "pattern": "/inputs/col1"
+      },
+      {
+        "netclass": "Matrix",
+        "pattern": "/inputs/col2"
+      },
+      {
+        "netclass": "Matrix",
+        "pattern": "/inputs/col3"
+      },
+      {
+        "netclass": "Matrix",
+        "pattern": "/inputs/col4"
+      },
+      {
+        "netclass": "Matrix",
+        "pattern": "/inputs/col5"
+      },
+      {
+        "netclass": "Matrix",
+        "pattern": "/inputs/col6"
+      },
+      {
+        "netclass": "Matrix",
+        "pattern": "/inputs/col7"
+      },
+      {
+        "netclass": "Matrix",
+        "pattern": "/inputs/col8"
+      },
+      {
+        "netclass": "Matrix",
+        "pattern": "/inputs/col9"
+      },
+      {
+        "netclass": "Matrix",
+        "pattern": "/inputs/col10"
+      },
+      {
+        "netclass": "Matrix",
+        "pattern": "/inputs/col11"
       }
     ]
   },

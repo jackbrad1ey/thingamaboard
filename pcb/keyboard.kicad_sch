@@ -81,6 +81,10 @@
     (stroke (width 0) (type default))
     (uuid a94ab63a-cbf6-4416-bd5c-d26c3bb6ebb4)
   )
+  (wire (pts (xy 114.3 124.46) (xy 127 124.46))
+    (stroke (width 0) (type default))
+    (uuid ab7092d3-4975-4136-90b4-5d8ff9a254ca)
+  )
   (wire (pts (xy 114.3 110.49) (xy 127 110.49))
     (stroke (width 0) (type default))
     (uuid b25af7da-9e43-4522-886b-c6a0bba8dd1d)
@@ -344,6 +348,10 @@
       (effects (font (size 1.27 1.27)) (justify right))
       (uuid fbef3b29-18fe-42b6-bcdc-2dbd57fd74b2)
     )
+    (pin "NRST" output (at 114.3 124.46 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+      (uuid aac2d2d2-d15b-4198-9356-66700bf09964)
+    )
     (instances
       (project "keyboard"
         (path "/fc529d87-72d0-4c92-b352-ddcf4c6f7199" (page "4"))
@@ -464,6 +472,10 @@
     (pin "col10" output (at 127 115.57 180)
       (effects (font (size 1.27 1.27)) (justify left))
       (uuid eda6d8bb-188b-4f21-bbef-75c6ea42ec62)
+    )
+    (pin "NRST" input (at 127 124.46 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 3764c7a5-5ed7-4926-846a-61191881449f)
     )
     (instances
       (project "keyboard"
