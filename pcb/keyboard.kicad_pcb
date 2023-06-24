@@ -9495,6 +9495,15 @@
     (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp f0545db1-c338-481e-833c-ae1fe664e7b1))
   (gr_arc locked (start 204.750002 61.336118) (mid 205.103566 61.48256) (end 205.250002 61.836118)
     (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp fa7d7f41-a013-462e-b751-3530906cce67))
+  (gr_text "Designed by Jack Bradley" (at 197.528558 128) (layer "B.SilkS") (tstamp 3a60825b-b14f-46cc-b9f5-bb9389149328)
+    (effects (font (size 1 1) (thickness 0.2) bold) (justify left bottom mirror))
+  )
+  (gr_text "v1.0" (at 221.528558 128.45) (layer "B.SilkS") (tstamp 8a7374ad-8f4e-469e-ae67-80aed4dcecef)
+    (effects (font (size 1.5 1.5) (thickness 0.375) bold) (justify left bottom mirror))
+  )
+  (gr_text "Thingamaboard" (at 222.528558 126) (layer "B.SilkS") (tstamp 8e67cc89-c36a-49e1-8921-6adfe749eab5)
+    (effects (font (size 4 4) (thickness 0.8) bold italic) (justify left bottom mirror))
+  )
   (gr_text "3.3V" (at 204.3 137.45 90) (layer "F.SilkS") (tstamp 19466e5e-ab8e-4dfc-9857-eca816b557ac)
     (effects (font (size 0.7 0.7) (thickness 0.175) bold) (justify left bottom))
   )
@@ -31924,6 +31933,13 @@
         (xy 199.349 81.5)
         (xy 202.901 81.5)
       )
+    )
+  )
+  (group "" (id dd16fcc7-7701-4732-8536-5fad40a12372)
+    (members
+      3a60825b-b14f-46cc-b9f5-bb9389149328
+      8a7374ad-8f4e-469e-ae67-80aed4dcecef
+      8e67cc89-c36a-49e1-8921-6adfe749eab5
     )
   )
   (group "" locked (id 000122c0-40cc-49a1-aa0f-6a658b4940ef)
