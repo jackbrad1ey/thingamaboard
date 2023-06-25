@@ -30,6 +30,9 @@ fp-info-cache
 *.dsn
 *.ses
 
+# Zipped production file
+*.zip
+
 
 ## AutoCAD
 # Temporary hidden files
