@@ -469,6 +469,11 @@
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
+    (model ":KICAD7_3DMODEL_DIR:Crystal.3dshapes/Crystal_SMD_MicroCrystal_CC7V-T1A-2Pin_3.2x1.5mm.step"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "Capacitor_SMD:C_0603_1608Metric" (layer "F.Cu")
@@ -2348,6 +2353,11 @@
     (pad "2" smd rect (at 2.9 2) (size 2.8 1) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 109 "/inputs/NRST") (pinfunction "2") (pintype "passive") (tstamp ce447835-fb93-48b9-b449-33d146b7872e))
     (model "${KICAD6_3DMODEL_DIR}/Button_Switch_SMD.3dshapes/SW_push_1P1T_NO_CK_KSC6xxJxxx.wrl"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
+    (model ":KICAD7_3DMODEL_DIR:Button_Switch_SMD.3dshapes/SW_SPST_TL3342.step"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -4383,6 +4393,11 @@
     (pad "4" smd rect (at -1.65 -1) (size 1.6 1.3) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 2 "GND") (pinfunction "4") (pintype "passive") (tstamp 8587901a-0302-4e85-9f5d-44546b1e4eb5))
     (model "${KICAD6_3DMODEL_DIR}/Crystal.3dshapes/Crystal_SMD_5032-4Pin_5.0x3.2mm.wrl"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
+    (model ":KICAD7_3DMODEL_DIR:Crystal.3dshapes/Crystal_SMD_0603-4Pin_6.0x3.5mm.step"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
