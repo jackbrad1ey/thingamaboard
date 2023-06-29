@@ -4127,6 +4127,11 @@
       (net 2 "GND") (pinfunction "SHIELD") (pintype "passive") (tstamp c3301b78-a4af-45ad-82fc-66235ffaeeb1))
     (pad "S1" thru_hole roundrect (at 4.32 0 180) (size 1 1.6) (drill oval 0.6 1.2) (layers "*.Cu" "*.Mask") (roundrect_rratio 0.5)
       (net 2 "GND") (pinfunction "SHIELD") (pintype "passive") (tstamp 0a309162-8a0d-4ecc-842b-4ee0d77aef5d))
+    (model "C:/Users/Jack/Projects/keyboard/cad/pcb/usb_c_connector.step"
+      (offset (xyz -4.46 -2.6 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "local-library:SW_PG1350" (layer "F.Cu")
@@ -5924,9 +5929,9 @@
     (pad "4" thru_hole oval (at 0 -7.62 90) (size 1.7 1.7) (drill 1) (layers "*.Cu" "*.Mask")
       (net 59 "/connectors/SWCLK") (pinfunction "Pin_4") (pintype "passive") (tstamp a3485765-e1d0-4aba-8d08-2d1cc28bc312))
     (model "${KICAD6_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x04_P2.54mm_Horizontal.wrl"
-      (offset (xyz 0 0 0))
+      (offset (xyz 0 -7.62 -1.59))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 180 0 0))
     )
   )
 
