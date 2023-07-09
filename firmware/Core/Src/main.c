@@ -68,7 +68,7 @@ static void MX_TIM2_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void delay_us (uint16_t us)
+void delay_us(uint16_t us)
 {
 	__HAL_TIM_SET_COUNTER(&htim2, 0);  // reset counter back to 0
 	while (__HAL_TIM_GET_COUNTER(&htim2) < us);  // wait for the counter to reach desired time
