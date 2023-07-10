@@ -1,0 +1,1 @@
+// stops a keypress from being registered twice within a given interval

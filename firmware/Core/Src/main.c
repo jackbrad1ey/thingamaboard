@@ -31,7 +31,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define ROW_PORT GPIOB
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
