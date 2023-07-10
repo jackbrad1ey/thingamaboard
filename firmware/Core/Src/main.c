@@ -19,7 +19,6 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "usb_device.h"
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -44,47 +43,10 @@
 TIM_HandleTypeDef htim2;
 
 /* USER CODE BEGIN PV */
-typedef struct
-{
-	uint8_t MODIFIER;
-	uint8_t RESERVED;
-	uint8_t KEYCODE1;
-	uint8_t KEYCODE2;
-	uint8_t KEYCODE3;
-	uint8_t KEYCODE4;
-	uint8_t KEYCODE5;
-	uint8_t KEYCODE6;
-} Keyboard;
-
-Keyboard keyboardHID = {0,0,0,0,0,0,0,0};
-
-int columns[][2] = {
-  {GPIO_PIN_7, GPIOC},
-  {GPIO_PIN_8, GPIOC},
-  {GPIO_PIN_9, GPIOC},
-  {GPIO_PIN_10, GPIOC},
-  {GPIO_PIN_11, GPIOC},
-  {GPIO_PIN_12, GPIOC},
-  {GPIO_PIN_8, GPIOA},
-  {GPIO_PIN_9, GPIOA},
-  {GPIO_PIN_10, GPIOA},
-  {GPIO_PIN_11, GPIOA},
-  {GPIO_PIN_12, GPIOA},
-  {GPIO_PIN_13, GPIOA},
-  {GPIO_PIN_14, GPIOA},
-  {GPIO_PIN_15, GPIOA},
-  {GPIO_PIN_2, GPIOD},
-  {GPIO_PIN_3, GPIOB},
-};
-
-// all row inputs are on GPIOB
-int rows[] = {
-  GPIO_PIN_2,
-  GPIO_PIN_8,
-  GPIO_PIN_9,
-  GPIO_PIN_10
-};
-
+void delay_us(uint16_t us) {
+	__HAL_TIM_SET_COUNTER(&htim2, 0);  // reset counter back to 0
+	while (__HAL_TIM_GET_COUNTER(&htim2) < us);  // wait for the counter to reach desired time
+}
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -97,11 +59,7 @@ static void MX_TIM2_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void delay_us(uint16_t us)
-{
-	__HAL_TIM_SET_COUNTER(&htim2, 0);  // reset counter back to 0
-	while (__HAL_TIM_GET_COUNTER(&htim2) < us);  // wait for the counter to reach desired time
-}
+
 /* USER CODE END 0 */
 
 /**
