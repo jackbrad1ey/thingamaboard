@@ -22,7 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "usbd_hid.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -32,6 +32,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define ROW_PORT GPIOB
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -56,6 +57,34 @@ typedef struct
 } Keyboard;
 
 Keyboard keyboardHID = {0,0,0,0,0,0,0,0};
+
+int columns[][2] = {
+  {GPIO_PIN_7, GPIOC},
+  {GPIO_PIN_8, GPIOC},
+  {GPIO_PIN_9, GPIOC},
+  {GPIO_PIN_10, GPIOC},
+  {GPIO_PIN_11, GPIOC},
+  {GPIO_PIN_12, GPIOC},
+  {GPIO_PIN_8, GPIOA},
+  {GPIO_PIN_9, GPIOA},
+  {GPIO_PIN_10, GPIOA},
+  {GPIO_PIN_11, GPIOA},
+  {GPIO_PIN_12, GPIOA},
+  {GPIO_PIN_13, GPIOA},
+  {GPIO_PIN_14, GPIOA},
+  {GPIO_PIN_15, GPIOA},
+  {GPIO_PIN_2, GPIOD},
+  {GPIO_PIN_3, GPIOB},
+};
+
+// all row inputs are on GPIOB
+int rows[] = {
+  GPIO_PIN_2,
+  GPIO_PIN_8,
+  GPIO_PIN_9,
+  GPIO_PIN_10
+};
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
