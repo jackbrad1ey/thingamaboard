@@ -5,14 +5,14 @@
  * Modifier masks - used for the first byte in the HID report.
  * NOTE: The second byte in the report is reserved, 0x00
  */
-#define KEY_MOD_LCTRL  0x01
-#define KEY_MOD_LSHIFT 0x02
-#define KEY_MOD_LALT   0x04
-#define KEY_MOD_LMETA  0x08
-#define KEY_MOD_RCTRL  0x10
-#define KEY_MOD_RSHIFT 0x20
-#define KEY_MOD_RALT   0x40
-#define KEY_MOD_RMETA  0x80
+#define KEY_MOD_LCTRL_MASK  0x01
+#define KEY_MOD_LSHIFT_MASK 0x02
+#define KEY_MOD_LALT_MASK   0x04
+#define KEY_MOD_LMETA_MASK  0x08
+#define KEY_MOD_RCTRL_MASK  0x10
+#define KEY_MOD_RSHIFT_MASK 0x20
+#define KEY_MOD_RALT_MASK   0x40
+#define KEY_MOD_RMETA_MASK  0x80
 
 /**
  * Scan codes - last N slots in the HID report (usually 6).
@@ -137,14 +137,27 @@
 #define KEY_F14 0x69 // Keyboard F14
 #define KEY_F15 0x6a // Keyboard F15
 #define KEY_F16 0x6b // Keyboard F16
-#define KEY_F17 0x6c // Keyboard F17
-#define KEY_F18 0x6d // Keyboard F18
-#define KEY_F19 0x6e // Keyboard F19
-#define KEY_F20 0x6f // Keyboard F20
-#define KEY_F21 0x70 // Keyboard F21
-#define KEY_F22 0x71 // Keyboard F22
-#define KEY_F23 0x72 // Keyboard F23
-#define KEY_F24 0x73 // Keyboard F24
+
+/**
+ * Repurposed keycodes
+ * We will use these as temp keycodes for our modifier keys
+ */
+// #define KEY_F17 0x6c // Keyboard F17
+// #define KEY_F18 0x6d // Keyboard F18
+// #define KEY_F19 0x6e // Keyboard F19
+// #define KEY_F20 0x6f // Keyboard F20
+// #define KEY_F21 0x70 // Keyboard F21
+// #define KEY_F22 0x71 // Keyboard F22
+// #define KEY_F23 0x72 // Keyboard F23
+// #define KEY_F24 0x73 // Keyboard F24
+#define KEY_MOD_LCTRL  0x6C
+#define KEY_MOD_LSHIFT 0x6D
+#define KEY_MOD_LALT   0x6E
+#define KEY_MOD_LMETA  0x6F
+#define KEY_MOD_RCTRL  0x70
+#define KEY_MOD_RSHIFT 0x71
+#define KEY_MOD_RALT   0x72
+#define KEY_MOD_RMETA  0x73
 
 #define KEY_OPEN 0x74 // Keyboard Execute
 #define KEY_HELP 0x75 // Keyboard Help
@@ -227,7 +240,7 @@
 // 0xcc  Keypad #
 // 0xcd  Keypad Space
 // 0xce  Keypad @
-// 0xcf  Keypad !
+#define KEY_KEYPAD_EXC_MARK 0xCF
 // 0xd0  Keypad Memory Store
 // 0xd1  Keypad Memory Recall
 // 0xd2  Keypad Memory Clear
