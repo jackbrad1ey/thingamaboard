@@ -27,8 +27,7 @@ int rows[NUM_ROWS] = {
   GPIO_PIN_2,
 };
 
-typedef struct
-{
+typedef struct {
 	uint8_t MODIFIER;
 	uint8_t RESERVED;
 	uint8_t KEYCODE1;
@@ -39,15 +38,25 @@ typedef struct
 	uint8_t KEYCODE6;
 } Keyboard;
 
-void scan_keys(int[NUM_ROWS][NUM_COLUMNS] raw_matrix, int modifier_mask) {
-    // int[NUM_ROWS][NUM_COLUMNS] raw_matrix = {0};  // set everything to zero initially
+void scan_keys(int keys[KEYS_PER_REPORT], int *modifier_byte) {
+    int num_keys = 0;
+
     for (int col=0; col < NUM_COLUMNS; col++) {
         HAL_GPIO_WritePin(columns[col][1], columns[col][0], GPIO_PIN_SET);
         delay_us(10);
 
         for (int row=0; row < NUM_ROWS; row++) {
-            raw_matrix[row][col] = HAL_GPIO_ReadPin(ROW_PORT, rows[row]);
+            if (HAL_GPIO_ReadPin(ROW_PORT, rows[row]) == GPIO_PIN_SET) {
+                int keycode = BASE_LAYOUT[row][col];
+
+                if (is_modifier(keycode)) {
+                    update_modifier_byte(keycode, modifier_byte);
+                } else {
+                    keys[num_keys] = keycode;
+                }
+            }
         }
+
         HAL_GPIO_WritePin(columns[col][1], columns[col][0], GPIO_PIN_RESET);
         delay_us(10);
     }

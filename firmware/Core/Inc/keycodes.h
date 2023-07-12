@@ -1,6 +1,8 @@
 #ifndef USB_HID_KEYS
 #define USB_HID_KEYS
 
+void update_modifier_byte(int keycode, int *modifier_byte);
+
 /**
  * Modifier masks - used for the first byte in the HID report.
  * NOTE: The second byte in the report is reserved, 0x00
