@@ -1,3 +1,9 @@
-#include "key_scan.h"
+#ifndef KEY_MAP
+#define KEY_MAP
 
-int BASE_LAYOUT[NUM_ROWS][NUM_COLUMNS];
+#define NUM_COLUMNS     12
+#define NUM_ROWS        4
+
+extern int BASE_LAYOUT[NUM_ROWS][NUM_COLUMNS];
+
+#endif

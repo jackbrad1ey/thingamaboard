@@ -28,3 +28,26 @@ void update_modifier_byte(int keycode, int *modifier_byte) {
             break;
     }
 }
+
+int is_modifier(int keycode) {
+    switch (keycode) {
+        case KEY_LEFTCTRL:
+            return 1;
+        case KEY_LEFTSHIFT:
+            return 1;
+        case KEY_LEFTALT:
+            return 1;
+        case KEY_LEFTMETA:
+            return 1;
+        case KEY_RIGHTCTRL:
+            return 1;
+        case KEY_RIGHTSHIFT:
+            return 1;
+        case KEY_RIGHTALT:
+            return 1;
+        case KEY_RIGHTMETA:
+            return 1;
+    }
+
+    return 0;
+}

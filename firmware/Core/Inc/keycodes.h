@@ -1,7 +1,8 @@
-#ifndef USB_HID_KEYS
-#define USB_HID_KEYS
+#ifndef KEYCODES
+#define KEYCODES
 
 void update_modifier_byte(int keycode, int *modifier_byte);
+int is_modifier(int keycode);
 
 /**
  * Modifier masks - used for the first byte in the HID report.
@@ -288,4 +289,4 @@ void update_modifier_byte(int keycode, int *modifier_byte);
 #define KEY_MEDIA_REFRESH 0xfa
 #define KEY_MEDIA_CALC 0xfb
 
-#endif // USB_HID_KEYS
+#endif
