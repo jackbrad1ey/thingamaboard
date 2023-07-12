@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "stdint.h": "c",
-        "keycodes.h": "c"
+        "keycodes.h": "c",
+        "key_map.h": "c"
     }
 }

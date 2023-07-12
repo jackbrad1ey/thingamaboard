@@ -1,6 +1,8 @@
 #include <stdint.h>
 #include "key_scan.h"
 #include "main.h"
+#include "key_map.h"
+#include "keycodes.h"
 
 int columns[NUM_COLUMNS][2] = {
   {GPIO_PIN_15, GPIOA},
@@ -37,9 +39,8 @@ typedef struct
 	uint8_t KEYCODE6;
 } Keyboard;
 
-void scan_keys(int[NUM_ROWS][NUM_COLUMNS] raw_matrix) {
+void scan_keys(int[NUM_ROWS][NUM_COLUMNS] raw_matrix, int modifier_mask) {
     // int[NUM_ROWS][NUM_COLUMNS] raw_matrix = {0};  // set everything to zero initially
-
     for (int col=0; col < NUM_COLUMNS; col++) {
         HAL_GPIO_WritePin(columns[col][1], columns[col][0], GPIO_PIN_SET);
         delay_us(10);
@@ -50,4 +51,27 @@ void scan_keys(int[NUM_ROWS][NUM_COLUMNS] raw_matrix) {
         HAL_GPIO_WritePin(columns[col][1], columns[col][0], GPIO_PIN_RESET);
         delay_us(10);
     }
+}
+
+int is_modifier(int keycode) {
+    switch (keycode) {
+        case KEY_LEFTCTRL:
+            return 1;
+        case KEY_LEFTSHIFT:
+            return 1;
+        case KEY_LEFTALT:
+            return 1;
+        case KEY_LEFTMETA:
+            return 1;
+        case KEY_RIGHTCTRL:
+            return 1;
+        case KEY_RIGHTSHIFT:
+            return 1;
+        case KEY_RIGHTALT:
+            return 1;
+        case KEY_RIGHTMETA:
+            return 1;
+    }
+
+    return 0;
 }
