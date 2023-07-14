@@ -81,8 +81,9 @@ void scan_keys(int keys[KEYS_PER_REPORT], int *modifier_byte) {
 
                 if (is_modifier(keycode)) {
                     update_modifier_byte(keycode, modifier_byte);
-                } else {
+                } else if (num_keys < KEYS_PER_REPORT) {
                     keys[num_keys] = keycode;
+                    num_keys++;
                 }
             }
         }
