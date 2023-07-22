@@ -21,7 +21,8 @@
 #include "usb_device.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "key_scan.h"
+#include "keycodes.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -47,6 +48,11 @@ void delay_us(uint16_t us) {
 	__HAL_TIM_SET_COUNTER(&htim2, 0);  // reset counter back to 0
 	while (__HAL_TIM_GET_COUNTER(&htim2) < us);  // wait for the counter to reach desired time
 }
+
+extern USBD_HandleTypeDef hUsbDeviceFS; 
+
+int keys[KEYS_PER_REPORT] = {KEY_NONE};
+int modifier_byte = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -94,6 +100,7 @@ int main(void)
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start(&htim2);
+  Keyboard report = (Keyboard) {0, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE};
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -101,7 +108,15 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    
+    scan_keys(keys, &modifier_byte);
+    report = (Keyboard) {modifier_byte, keys[0], keys[1], keys[2], keys[3], keys[4], keys[5]};
+
+    USBD_HID_SendReport(&hUsbDeviceFS, &report, sizeof(report));
+
+    for (int i; i < KEYS_PER_REPORT; i++) {
+      keys[i] = KEY_NONE;
+    }
+    modifier_byte = 0;
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
