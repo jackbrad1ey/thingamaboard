@@ -108,15 +108,19 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    scan_keys(keys, &modifier_byte);
-    report = (Keyboard) {modifier_byte, keys[0], keys[1], keys[2], keys[3], keys[4], keys[5]};
+    // scan_keys(keys, &modifier_byte);
+    // report = (Keyboard) {modifier_byte, keys[0], keys[1], keys[2], keys[3], keys[4], keys[5]};
 
+    // USBD_HID_SendReport(&hUsbDeviceFS, &report, sizeof(report));
+
+    // for (int i; i < KEYS_PER_REPORT; i++) {
+    //   keys[i] = KEY_NONE;
+    // }
+    // modifier_byte = 0;
+
+    report = (Keyboard) {0, KEY_H, KEY_I, 0, 0, 0, 0};
     USBD_HID_SendReport(&hUsbDeviceFS, &report, sizeof(report));
-
-    for (int i; i < KEYS_PER_REPORT; i++) {
-      keys[i] = KEY_NONE;
-    }
-    modifier_byte = 0;
+    HAL_Delay(2000);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
