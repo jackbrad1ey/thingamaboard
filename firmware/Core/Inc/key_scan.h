@@ -5,14 +5,14 @@
 #define KEYS_PER_REPORT 6
 
 typedef struct {
-    int MODIFIER;
-    int RESERVED;
-    int KEYCODE1;
-    int KEYCODE2;
-    int KEYCODE3;
-    int KEYCODE4;
-    int KEYCODE5;
-    int KEYCODE6;
+    uint8_t MODIFIER;
+    uint8_t RESERVED;
+    uint8_t KEYCODE1;
+    uint8_t KEYCODE2;
+    uint8_t KEYCODE3;
+    uint8_t KEYCODE4;
+    uint8_t KEYCODE5;
+    uint8_t KEYCODE6;
 } Keyboard;
 
 void scan_keys(int keys[KEYS_PER_REPORT], int *modifier_byte);
