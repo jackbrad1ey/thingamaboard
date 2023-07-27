@@ -22,7 +22,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "key_scan.h"
+#include "keycodes.h"
+#include "usbd_hid.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -32,6 +34,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -40,14 +43,29 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+TIM_HandleTypeDef htim2;
 
 /* USER CODE BEGIN PV */
+extern USBD_HandleTypeDef hUsbDeviceFS;
+
+int keys[KEYS_PER_REPORT] = {KEY_NONE};
+int modifier_byte = 0;
+
+void delay_us(uint16_t us) {
+	__HAL_TIM_SET_COUNTER(&htim2, 0);  // reset counter back to 0
+	while (__HAL_TIM_GET_COUNTER(&htim2) < us);  // wait for the counter to reach desired time
+}
+
+uint8_t HID_IsIdle(USBD_HandleTypeDef *pdev) {
+	return ((USBD_HID_HandleTypeDef *)pdev->pClassData)->state == HID_IDLE;
+}
 
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+static void MX_TIM2_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -86,8 +104,10 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USB_DEVICE_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-
+  HAL_TIM_Base_Start(&htim2);
+  Keyboard report = (Keyboard) {0, 0, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE};
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -97,6 +117,28 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+//	HAL_Delay(7);
+	// wait until our last report has been read
+//	if (!HID_IsIdle(&hUsbDeviceFS)) {
+//		continue;
+//	}
+
+	scan_keys(keys, &modifier_byte);
+	report = (Keyboard) {modifier_byte, 0, keys[0], keys[1], keys[2], keys[3], keys[4], keys[5]};
+
+	USBD_HID_SendReport(&hUsbDeviceFS, &report, sizeof(report));
+
+	for (int i=0; i < KEYS_PER_REPORT; i++) {
+		keys[i] = KEY_NONE;
+	}
+	modifier_byte = 0;
+
+//	report = (Keyboard) {0, 0, KEY_H, KEY_I, 0, 0, 0, 0};
+//	USBD_HID_SendReport(&hUsbDeviceFS, &report, sizeof(report));
+//	HAL_Delay(50);
+//	report = (Keyboard) {0, 0, 0, 0, 0, 0, 0, 0};
+//	USBD_HID_SendReport(&hUsbDeviceFS, &report, sizeof(report));
+//	HAL_Delay(2000);
   }
   /* USER CODE END 3 */
 }
@@ -147,6 +189,51 @@ void SystemClock_Config(void)
 }
 
 /**
+  * @brief TIM2 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM2_Init(void)
+{
+
+  /* USER CODE BEGIN TIM2_Init 0 */
+
+  /* USER CODE END TIM2_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM2_Init 1 */
+
+  /* USER CODE END TIM2_Init 1 */
+  htim2.Instance = TIM2;
+  htim2.Init.Prescaler = 96-1;
+  htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim2.Init.Period = 4294967295;
+  htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim2, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim2, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM2_Init 2 */
+
+  /* USER CODE END TIM2_Init 2 */
+
+}
+
+/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -178,7 +265,7 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pins : PB2 PB10 PB8 PB9 */
   GPIO_InitStruct.Pin = GPIO_PIN_2|GPIO_PIN_10|GPIO_PIN_8|GPIO_PIN_9;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PC7 PC8 PC9 PC10
