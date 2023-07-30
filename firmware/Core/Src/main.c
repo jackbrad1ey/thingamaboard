@@ -119,9 +119,9 @@ int main(void)
     /* USER CODE BEGIN 3 */
 //	HAL_Delay(7);
 	// wait until our last report has been read
-//	if (!HID_IsIdle(&hUsbDeviceFS)) {
-//		continue;
-//	}
+	if (!HID_IsIdle(&hUsbDeviceFS)) {
+		continue;
+	}
 
 	scan_keys(keys, &modifier_byte);
 	report = (Keyboard) {modifier_byte, 0, keys[0], keys[1], keys[2], keys[3], keys[4], keys[5]};

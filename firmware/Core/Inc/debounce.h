@@ -1,7 +1,7 @@
 #ifndef DEBOUNCE_M
 #define DEBOUNCE_M
 
-#define DEBOUNCE_RATE 3
+#define DEBOUNCE_RATE 5
 extern int debounce_array[256];
 extern int active_toggle[256];
 
