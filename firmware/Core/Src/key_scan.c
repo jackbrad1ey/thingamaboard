@@ -52,6 +52,10 @@ void scan_keys(int keys[KEYS_PER_REPORT], int *modifier_byte) {
         delay_us(10);
 
         for (int row=0; row < NUM_ROWS; row++) {
+        	if (col == 0 && row == 0) {  // dead key for now
+        		continue;
+        	}
+
             if (HAL_GPIO_ReadPin(ROW_PORT, rows[row]) == GPIO_PIN_SET) {
                 int keycode = BASE_LAYOUT[row][col];
 
