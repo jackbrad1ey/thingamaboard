@@ -52,12 +52,12 @@ void scan_keys(int keys[KEYS_PER_REPORT], int *modifier_byte) {
         delay_us(10);
 
         for (int row=0; row < NUM_ROWS; row++) {
-        	if (col == 0 && row == 0) {  // dead key for now
-        		continue;
-        	}
+            int keycode = BASE_LAYOUT[row][col];
 
             if (HAL_GPIO_ReadPin(ROW_PORT, rows[row]) == GPIO_PIN_SET) {
-                int keycode = BASE_LAYOUT[row][col];
+                if (col == 0 && row == 0) {  // dead key for now
+        		    continue;
+        	    }
 
                 if (is_modifier(keycode)) {
                     update_modifier_byte(keycode, modifier_byte);
@@ -66,6 +66,8 @@ void scan_keys(int keys[KEYS_PER_REPORT], int *modifier_byte) {
                     keys[num_keys] = keycode;
                     num_keys++;
                 }
+            } else if (active_toggle[keycode] == 1 && debounce_array[keycode] == 0) {
+                active_toggle[keycode] = 0;
             }
         }
         HAL_GPIO_WritePin(columns_ports[col], columns_pins[col], GPIO_PIN_RESET);
